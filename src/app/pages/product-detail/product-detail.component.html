@@ -1,0 +1,121 @@
+<section class="pd-page" *ngIf="product">
+  <div class="pd-container">
+    <!-- Back Button -->
+    <a
+      routerLink="/"
+      fragment="products"
+      class="pd-back-link"
+    >
+      <svg class="pd-back-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      {{ i18n.t('product.backHome') }}
+    </a>
+
+    <!-- Hero Card -->
+    <div class="pd-hero-card">
+      <div class="pd-hero-inner">
+        <!-- Image -->
+        <div class="pd-hero-image-wrapper">
+          <img
+            [src]="product.image"
+            [alt]="i18n.t(product.nameKey)"
+            class="pd-hero-image"
+          />
+          <div class="pd-hero-image-overlay"></div>
+        </div>
+        <!-- Info -->
+        <div class="pd-hero-info">
+          <span class="pd-category-badge">
+            {{ product.category }}
+          </span>
+          <h1 class="pd-name">{{ i18n.t(product.nameKey) }}</h1>
+          <p class="pd-tagline">{{ i18n.t('product.tagline') }}</p>
+          <div class="pd-meta">
+            <span class="pd-meta-item">
+              <svg class="pd-meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              {{ product.targetAudience }}
+            </span>
+            <span class="pd-meta-item">
+              <svg class="pd-meta-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              {{ i18n.t('product.launched') }} {{ product.launchYear }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About / Overview Section -->
+    <div class="pd-section-card">
+      <h2 class="pd-section-title">
+        <svg class="pd-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        {{ i18n.t('product.overview') }}
+      </h2>
+      <p class="pd-overview-text">{{ i18n.t(product.fullDescKey) }}</p>
+    </div>
+
+    <!-- Key Highlights -->
+    <div class="pd-section-card">
+      <h2 class="pd-section-title-highlights">
+        <svg class="pd-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        {{ i18n.t('product.highlights') }}
+      </h2>
+      <ul class="pd-highlights-list">
+        <li *ngFor="let highlight of product.highlights" class="pd-highlight-item">
+          <span class="pd-highlight-check">
+            <svg class="pd-highlight-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+          </span>
+          <span class="pd-highlight-text">{{ highlight }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact CTA -->
+    <div class="pd-contact-cta">
+      <h3 class="pd-contact-title">{{ i18n.t('product.getStarted') }}</h3>
+      <p class="pd-contact-text">{{ i18n.t('product.contactMessage') }}</p>
+      <a
+        routerLink="/contact"
+        class="pd-contact-btn"
+      >
+        <svg class="pd-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        {{ i18n.t('product.contactUs') }}
+      </a>
+    </div>
+
+    <!-- Back to Home (bottom) -->
+    <div class="pd-bottom-back">
+      <a
+        routerLink="/"
+        class="pd-bottom-link"
+      >
+        <svg class="pd-bottom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        {{ i18n.t('product.backHome') }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Not Found -->
+<section class="pd-not-found" *ngIf="!product">
+  <div class="pd-not-found-inner">
+    <h2 class="pd-not-found-title">{{ i18n.t('product.notFound') }}</h2>
+    <a routerLink="/" class="pd-not-found-link">
+      &larr; {{ i18n.t('product.backHome') }}
+    </a>
+  </div>
+</section>

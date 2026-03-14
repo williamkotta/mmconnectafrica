@@ -1,0 +1,201 @@
+:host {
+  display: block;
+}
+
+/* Preview panel slide-in animation */
+.preview-panel {
+  animation: previewSlideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes previewSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ph-page {
+  @apply min-h-screen bg-white dark:bg-secondary-900 pt-20 pb-20 transition-colors duration-300;
+}
+
+.ph-container {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.ph-header {
+  @apply text-center mb-8;
+}
+
+.ph-icon-wrapper {
+  @apply mb-6;
+}
+
+.ph-icon {
+  @apply w-16 h-16 mx-auto text-secondary-300 dark:text-secondary-600 mb-4;
+}
+
+.ph-title {
+  @apply text-4xl font-bold text-secondary-900 dark:text-white mb-4 font-display;
+}
+
+.ph-description {
+  @apply text-lg text-secondary-600 dark:text-secondary-400 mb-6 max-w-2xl mx-auto font-body;
+}
+
+.ph-tip-box {
+  @apply inline-block bg-primary-50 dark:bg-primary-900/30 border border-primary-200 dark:border-primary-700 rounded-lg p-4 mb-8;
+}
+
+.ph-tip-text {
+  @apply text-primary-900 dark:text-primary-300 text-sm;
+}
+
+/* Preview Button */
+.ph-preview-btn-wrapper {
+  @apply text-center mb-10;
+}
+
+.ph-preview-btn {
+  @apply inline-flex items-center gap-2 bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white font-bold px-8 py-3.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl cursor-pointer;
+}
+
+.ph-preview-btn-icon {
+  @apply w-5 h-5 transition-transform duration-300;
+}
+
+.ph-preview-chevron {
+  @apply w-4 h-4 transition-transform duration-300;
+}
+
+/* Preview Section */
+.ph-back-link {
+  @apply inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium mb-8 transition-colors;
+}
+
+.ph-back-icon {
+  @apply w-5 h-5 transition-transform;
+}
+
+.ph-back-link:hover .ph-back-icon {
+  @apply -translate-x-1;
+}
+
+/* Hero Card */
+.ph-hero-card {
+  @apply bg-white dark:bg-secondary-800 rounded-3xl shadow-xl overflow-hidden mb-10 border border-secondary-100 dark:border-secondary-700;
+}
+
+.ph-hero-inner {
+  @apply md:flex;
+}
+
+.ph-hero-image-wrapper {
+  @apply md:w-2/5 relative bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/30 dark:to-primary-800/20;
+}
+
+.ph-hero-image {
+  @apply w-full h-72 md:h-full object-cover;
+}
+
+.ph-hero-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:bg-gradient-to-r;
+}
+
+.ph-hero-info {
+  @apply md:w-3/5 p-8 lg:p-10 flex flex-col justify-center;
+}
+
+.ph-hero-badge {
+  @apply inline-block bg-primary-50 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit;
+}
+
+.ph-hero-title {
+  @apply text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-2 font-display;
+}
+
+.ph-hero-subtitle {
+  @apply text-primary-600 dark:text-primary-400 font-semibold text-lg mb-4;
+}
+
+/* Section Cards */
+.ph-section-card {
+  @apply bg-white dark:bg-secondary-800 rounded-2xl shadow-md p-8 lg:p-10 mb-8 border border-secondary-100 dark:border-secondary-700;
+}
+
+.ph-section-title {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-4 flex items-center gap-2 font-display;
+}
+
+.ph-section-title-highlights {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-6 flex items-center gap-2 font-display;
+}
+
+.ph-section-icon {
+  @apply w-6 h-6 text-primary-600 dark:text-primary-400;
+}
+
+.ph-overview-text {
+  @apply text-secondary-700 dark:text-secondary-300 leading-relaxed text-base font-body;
+}
+
+.ph-highlights-list {
+  @apply space-y-4;
+}
+
+.ph-highlight-item {
+  @apply flex items-start gap-3;
+}
+
+.ph-highlight-check {
+  @apply mt-1 flex-shrink-0 w-6 h-6 bg-primary-100 dark:bg-primary-900/50 text-primary-700 dark:text-primary-300 rounded-full flex items-center justify-center;
+}
+
+.ph-highlight-check-icon {
+  @apply w-3.5 h-3.5;
+}
+
+.ph-highlight-text {
+  @apply text-secondary-700 dark:text-secondary-300 text-base font-body;
+}
+
+/* Contact CTA */
+.ph-contact-cta {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-center text-white mb-8;
+}
+
+.ph-contact-title {
+  @apply text-xl font-bold mb-2 font-display;
+}
+
+.ph-contact-text {
+  @apply text-white/80 mb-4 font-body;
+}
+
+.ph-contact-btn {
+  @apply inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors;
+}
+
+.ph-contact-icon {
+  @apply w-4 h-4;
+}
+
+/* Bottom back */
+.ph-bottom-back {
+  @apply text-center mt-10;
+}
+
+.ph-bottom-link {
+  @apply inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium transition-colors;
+}
+
+.ph-bottom-icon {
+  @apply w-5 h-5 transition-transform;
+}
+
+.ph-bottom-link:hover .ph-bottom-icon {
+  @apply -translate-x-1;
+}

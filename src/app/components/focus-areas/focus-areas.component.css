@@ -1,0 +1,61 @@
+/* Focus Areas component styles */
+
+:host {
+  display: block;
+}
+
+.focus-section {
+  @apply relative bg-gradient-to-b from-secondary-50/30 to-white dark:from-secondary-800/30 dark:to-secondary-900 py-20 lg:py-28 transition-colors duration-300;
+}
+
+.focus-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.focus-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-10;
+}
+
+.focus-item {
+  @apply text-center relative;
+}
+
+.focus-number {
+  @apply text-7xl font-extrabold text-primary-50 dark:text-primary-900/30 font-display absolute -top-4 left-1/2 -translate-x-1/2 select-none transition-colors duration-500;
+}
+
+.focus-item:hover .focus-number {
+  @apply text-primary-100 dark:text-primary-800/40;
+}
+
+.focus-content {
+  @apply relative pt-10;
+}
+
+.focus-icon-circle {
+  @apply w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/50 dark:to-primary-800/50 flex items-center justify-center mx-auto mb-5 transition-all duration-500;
+}
+
+.focus-item:hover .focus-icon-circle {
+  @apply from-primary-500 to-primary-700 shadow-lg shadow-primary-200 dark:shadow-primary-900 scale-110;
+}
+
+.focus-icon {
+  @apply w-7 h-7 text-primary-700 dark:text-primary-400 transition-colors duration-300;
+}
+
+.focus-item:hover .focus-icon {
+  @apply text-white;
+}
+
+.focus-title {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-4 font-display transition-colors duration-300;
+}
+
+.focus-item:hover .focus-title {
+  @apply text-primary-600 dark:text-primary-400;
+}
+
+.focus-description {
+  @apply text-secondary-600 dark:text-secondary-400 leading-relaxed font-body;
+}

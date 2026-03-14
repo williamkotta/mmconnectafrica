@@ -1,0 +1,180 @@
+:host {
+  display: block;
+}
+
+.expert-page {
+  @apply bg-secondary-50 min-h-screen py-12 lg:py-20;
+}
+
+.expert-container {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.expert-back-link {
+  @apply inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-medium mb-8 transition-colors;
+}
+
+.expert-back-icon {
+  @apply w-5 h-5 transition-transform;
+}
+
+.expert-back-link:hover .expert-back-icon {
+  @apply -translate-x-1;
+}
+
+/* Hero Card */
+.expert-hero-card {
+  @apply bg-white rounded-3xl shadow-xl overflow-hidden mb-10;
+}
+
+.expert-hero-inner {
+  @apply md:flex;
+}
+
+.expert-hero-image-wrapper {
+  @apply md:w-2/5 relative bg-gradient-to-br from-primary-100 to-primary-50;
+}
+
+.expert-hero-image {
+  @apply w-full h-72 md:h-full object-cover;
+}
+
+.expert-hero-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/20 to-transparent md:bg-gradient-to-r;
+}
+
+.expert-hero-info {
+  @apply md:w-3/5 p-8 lg:p-10 flex flex-col justify-center;
+}
+
+.expert-specialty-badge {
+  @apply inline-block bg-primary-50 text-primary-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit;
+}
+
+.expert-name {
+  @apply text-3xl lg:text-4xl font-bold text-secondary-900 mb-2;
+}
+
+.expert-title {
+  @apply text-primary-600 font-semibold text-lg mb-4;
+}
+
+.expert-meta {
+  @apply flex flex-wrap gap-4 text-sm text-secondary-500;
+}
+
+.expert-meta-item {
+  @apply flex items-center gap-1.5;
+}
+
+.expert-meta-icon {
+  @apply w-4 h-4;
+}
+
+.expert-linkedin-wrapper {
+  @apply mt-6;
+}
+
+.expert-linkedin-btn {
+  @apply inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-medium px-5 py-2.5 rounded-lg transition-colors;
+}
+
+.expert-linkedin-icon {
+  @apply w-4 h-4;
+}
+
+/* About & Achievement Sections */
+.expert-section-card {
+  @apply bg-white rounded-2xl shadow-md p-8 lg:p-10 mb-8;
+}
+
+.expert-section-title {
+  @apply text-2xl font-bold text-secondary-900 mb-4 flex items-center gap-2;
+}
+
+.expert-section-title-achievements {
+  @apply text-2xl font-bold text-secondary-900 mb-6 flex items-center gap-2;
+}
+
+.expert-section-icon {
+  @apply w-6 h-6 text-primary-600;
+}
+
+.expert-bio {
+  @apply text-secondary-700 leading-relaxed text-base;
+}
+
+.expert-achievements-list {
+  @apply space-y-4;
+}
+
+.expert-achievement-item {
+  @apply flex items-start gap-3;
+}
+
+.expert-achievement-check {
+  @apply mt-1 flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center;
+}
+
+.expert-achievement-check-icon {
+  @apply w-3.5 h-3.5;
+}
+
+.expert-achievement-text {
+  @apply text-secondary-700 text-base;
+}
+
+/* Contact CTA */
+.expert-contact-cta {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-center text-white;
+}
+
+.expert-contact-title {
+  @apply text-xl font-bold mb-2;
+}
+
+.expert-contact-text {
+  @apply text-white/80 mb-4;
+}
+
+.expert-email-btn {
+  @apply inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors;
+}
+
+.expert-email-icon {
+  @apply w-4 h-4;
+}
+
+/* Bottom back link */
+.expert-bottom-back {
+  @apply text-center mt-10;
+}
+
+.expert-bottom-link {
+  @apply inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-medium transition-colors;
+}
+
+.expert-bottom-icon {
+  @apply w-5 h-5 transition-transform;
+}
+
+.expert-bottom-link:hover .expert-bottom-icon {
+  @apply -translate-x-1;
+}
+
+/* Not Found */
+.expert-not-found {
+  @apply min-h-screen flex items-center justify-center;
+}
+
+.expert-not-found-inner {
+  @apply text-center;
+}
+
+.expert-not-found-title {
+  @apply text-2xl font-bold text-secondary-900 mb-4;
+}
+
+.expert-not-found-link {
+  @apply text-primary-600 hover:text-primary-800 font-medium;
+}

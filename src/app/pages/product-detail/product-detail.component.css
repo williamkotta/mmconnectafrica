@@ -1,0 +1,168 @@
+:host {
+  display: block;
+}
+
+.pd-page {
+  @apply bg-secondary-50 dark:bg-secondary-900 min-h-screen py-12 lg:py-20 transition-colors duration-300;
+}
+
+.pd-container {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.pd-back-link {
+  @apply inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium mb-8 transition-colors;
+}
+
+.pd-back-icon {
+  @apply w-5 h-5 transition-transform;
+}
+
+.pd-back-link:hover .pd-back-icon {
+  @apply -translate-x-1;
+}
+
+/* Hero Card */
+.pd-hero-card {
+  @apply bg-white dark:bg-secondary-800 rounded-3xl shadow-xl overflow-hidden mb-10 transition-colors duration-300;
+}
+
+.pd-hero-inner {
+  @apply md:flex;
+}
+
+.pd-hero-image-wrapper {
+  @apply md:w-2/5 relative bg-gradient-to-br from-primary-700 to-primary-900 dark:from-primary-800 dark:to-primary-900 flex items-center justify-center p-8;
+}
+
+.pd-hero-image {
+  @apply h-48 md:h-56 w-auto object-contain;
+}
+
+.pd-hero-image-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/10 to-transparent md:bg-gradient-to-r;
+}
+
+.pd-hero-info {
+  @apply md:w-3/5 p-8 lg:p-10 flex flex-col justify-center;
+}
+
+.pd-category-badge {
+  @apply inline-block bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit;
+}
+
+.pd-name {
+  @apply text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-2;
+}
+
+.pd-tagline {
+  @apply text-primary-600 dark:text-primary-400 font-semibold text-lg mb-4;
+}
+
+.pd-meta {
+  @apply flex flex-wrap gap-4 text-sm text-secondary-500 dark:text-secondary-400;
+}
+
+.pd-meta-item {
+  @apply flex items-center gap-1.5;
+}
+
+.pd-meta-icon {
+  @apply w-4 h-4;
+}
+
+/* Section Cards */
+.pd-section-card {
+  @apply bg-white dark:bg-secondary-800 rounded-2xl shadow-md p-8 lg:p-10 mb-8 transition-colors duration-300;
+}
+
+.pd-section-title {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-4 flex items-center gap-2;
+}
+
+.pd-section-title-highlights {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-6 flex items-center gap-2;
+}
+
+.pd-section-icon {
+  @apply w-6 h-6 text-primary-600 dark:text-primary-400;
+}
+
+.pd-overview-text {
+  @apply text-secondary-700 dark:text-secondary-300 leading-relaxed text-base;
+}
+
+.pd-highlights-list {
+  @apply space-y-4;
+}
+
+.pd-highlight-item {
+  @apply flex items-start gap-3;
+}
+
+.pd-highlight-check {
+  @apply mt-1 flex-shrink-0 w-6 h-6 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400 rounded-full flex items-center justify-center;
+}
+
+.pd-highlight-check-icon {
+  @apply w-3.5 h-3.5;
+}
+
+.pd-highlight-text {
+  @apply text-secondary-700 dark:text-secondary-300 text-base;
+}
+
+/* Contact CTA */
+.pd-contact-cta {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 text-center text-white;
+}
+
+.pd-contact-title {
+  @apply text-xl font-bold mb-2;
+}
+
+.pd-contact-text {
+  @apply text-white/80 mb-4;
+}
+
+.pd-contact-btn {
+  @apply inline-flex items-center gap-2 bg-white text-primary-700 hover:bg-gray-100 font-semibold px-6 py-3 rounded-lg transition-colors;
+}
+
+.pd-contact-icon {
+  @apply w-4 h-4;
+}
+
+/* Bottom back */
+.pd-bottom-back {
+  @apply text-center mt-10;
+}
+
+.pd-bottom-link {
+  @apply inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium transition-colors;
+}
+
+.pd-bottom-icon {
+  @apply w-5 h-5 transition-transform;
+}
+
+.pd-bottom-link:hover .pd-bottom-icon {
+  @apply -translate-x-1;
+}
+
+/* Not Found */
+.pd-not-found {
+  @apply min-h-screen flex items-center justify-center bg-secondary-50 dark:bg-secondary-900;
+}
+
+.pd-not-found-inner {
+  @apply text-center;
+}
+
+.pd-not-found-title {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-4;
+}
+
+.pd-not-found-link {
+  @apply text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium;
+}

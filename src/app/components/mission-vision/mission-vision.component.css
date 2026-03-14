@@ -1,0 +1,57 @@
+/* Mission Vision component styles */
+
+:host {
+  display: block;
+}
+
+.mv-section {
+  @apply relative bg-gradient-to-b from-white to-secondary-50/50 dark:from-secondary-900 dark:to-secondary-800/50 py-20 lg:py-28 transition-colors duration-300;
+}
+
+.mv-container {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.mv-badge-wrapper {
+  @apply text-center mb-12;
+}
+
+.mv-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.mv-card {
+  @apply relative bg-gradient-to-br from-[#FFF9E6] to-[#FFF3CC] dark:from-secondary-800 dark:to-secondary-700 rounded-2xl p-8 sm:p-10 flex flex-col min-h-[280px] cursor-default overflow-hidden;
+}
+
+.mv-card-corner {
+  @apply absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-100/40 dark:from-primary-700/20 to-transparent rounded-bl-full;
+}
+
+.mv-card-content {
+  @apply relative;
+}
+
+.mv-card-header {
+  @apply flex items-start justify-between mb-6;
+}
+
+.mv-card-title {
+  @apply text-4xl sm:text-5xl font-extrabold text-[#1B2B70] dark:text-white font-display tracking-tight;
+}
+
+.mv-card-icon {
+  @apply w-12 h-12 rounded-full bg-primary-600/10 dark:bg-primary-500/20 flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-500;
+}
+
+.mv-card:hover .mv-card-icon {
+  @apply rotate-90 bg-primary-600/20 dark:bg-primary-500/30 scale-110;
+}
+
+.mv-card-icon-svg {
+  @apply w-5 h-5 text-primary-700 dark:text-primary-400;
+}
+
+.mv-card-text {
+  @apply text-secondary-700 dark:text-secondary-300 text-base sm:text-lg leading-relaxed font-body;
+}

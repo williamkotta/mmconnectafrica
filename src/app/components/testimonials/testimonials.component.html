@@ -1,0 +1,42 @@
+<section class="testimonials-section">
+  <div class="testimonials-bg-grid"></div>
+
+  <div class="testimonials-container">
+    <!-- Testimonials Header -->
+    <div appScrollReveal="fade-up" class="testimonials-header">
+      <span class="section-badge testimonials-badge">Testimonials</span>
+      <h2 class="testimonials-heading">
+        {{ i18n.t('testimonials.heading') }}
+      </h2>
+      <p class="testimonials-sub">
+        {{ i18n.t('testimonials.sub') }}
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="testimonials-grid">
+      <div *ngFor="let testimonial of testimonials; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 120" class="testimonial-card group hover-tilt gradient-border">
+        <!-- Quote icon -->
+        <div class="testimonial-quote">"</div>
+        <!-- Rating -->
+        <div class="testimonial-stars">
+          <span *ngFor="let star of [1,2,3,4,5]" class="testimonial-star">★</span>
+        </div>
+        <!-- Comment -->
+        <p class="testimonial-comment">
+          "{{ testimonial.comment }}"
+        </p>
+        <!-- Author -->
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">
+            {{ testimonial.initials }}
+          </div>
+          <div>
+            <p class="testimonial-author-name">{{ testimonial.name }}</p>
+            <p class="testimonial-author-role">{{ testimonial.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

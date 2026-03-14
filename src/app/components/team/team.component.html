@@ -1,0 +1,33 @@
+<section class="team-section">
+  <!-- Decorative background -->
+  <div class="team-bg-dots"></div>
+
+  <div class="team-container">
+    <!-- Section Header -->
+    <div appScrollReveal="fade-up" class="team-header">
+      <span class="section-badge team-badge">{{ i18n.t('nav.team') }}</span>
+      <h2 class="team-heading">
+        {{ i18n.t('team.heading') }}
+      </h2>
+    </div>
+
+    <!-- Team Grid -->
+    <div class="team-grid">
+      <div *ngFor="let member of teamMembers; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 100" class="team-member group">
+        <!-- Avatar with morph blob -->
+        <div class="member-avatar-wrapper">
+          <div class="member-avatar morph-blob">
+            <span class="member-initials">{{ member.initials }}</span>
+          </div>
+          <!-- Decorative ring on hover -->
+          <div class="member-ring animate-spin-slow"></div>
+        </div>
+        <!-- Content -->
+        <div class="member-info">
+          <h3 class="member-name">{{ member.name }}</h3>
+          <p class="member-role">{{ member.role }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

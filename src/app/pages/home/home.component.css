@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+
+.home-wrapper {
+  @apply min-h-screen bg-white dark:bg-secondary-900 transition-colors duration-300;
+}
+
+.contact-section {
+  @apply relative bg-gradient-to-b from-white to-secondary-50/30 dark:from-secondary-900 dark:to-secondary-800/30 py-20 lg:py-28 overflow-hidden transition-colors duration-300;
+}
+
+.contact-bg-dots {
+  @apply absolute inset-0 opacity-15 dark:opacity-10 pointer-events-none;
+  background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.contact-container {
+  @apply relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.contact-header {
+  @apply text-center mb-12;
+}
+
+.contact-badge {
+  @apply mb-4 inline-flex;
+}
+
+.contact-heading {
+  @apply text-3xl font-extrabold text-secondary-900 dark:text-white font-display tracking-tight;
+}
+
+.contact-form {
+  @apply space-y-6 bg-white dark:bg-secondary-800 rounded-2xl p-8 border border-secondary-100 dark:border-secondary-700 shadow-sm;
+}
+
+.contact-label {
+  @apply block text-sm font-semibold text-secondary-800 dark:text-secondary-200 mb-2 font-display;
+}
+
+.contact-input {
+  @apply w-full px-4 py-3 border border-secondary-200 dark:border-secondary-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-secondary-900 dark:text-white bg-white dark:bg-secondary-700 placeholder-secondary-400 dark:placeholder-secondary-500 transition-all duration-300 font-body;
+}
+
+.contact-textarea {
+  @apply w-full px-4 py-3 border border-secondary-200 dark:border-secondary-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-secondary-900 dark:text-white bg-white dark:bg-secondary-700 placeholder-secondary-400 dark:placeholder-secondary-500 resize-none transition-all duration-300 font-body;
+}
+
+.contact-submit-wrapper {
+  @apply flex justify-end;
+}
+
+.contact-submit-btn {
+  @apply bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white font-bold py-3.5 px-8 rounded-xl transition-all duration-300;
+}

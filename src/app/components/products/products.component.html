@@ -1,0 +1,43 @@
+<section class="products-section">
+  <!-- Background decorations -->
+  <div class="products-bg-dots"></div>
+  <div class="products-bg-orb"></div>
+
+  <div class="products-container">
+    <!-- Section Header -->
+    <div appScrollReveal="fade-up" class="products-header">
+      <span class="section-badge products-badge">{{ i18n.t('nav.products') }}</span>
+      <h2 class="products-heading">
+        {{ i18n.t('products.heading') }}<br/>{{ i18n.t('products.headingLine2') }}<span class="gradient-text">{{ i18n.t('products.headingHighlight') }}</span>
+      </h2>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      <div *ngFor="let product of products; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 120" class="product-card group hover-tilt gradient-border">
+        <!-- Scan effect overlay -->
+        <div class="product-scan scan-effect"></div>
+
+        <!-- Product Image -->
+        <div class="product-image-wrapper">
+          <img src="assets/13.png" [alt]="i18n.t(product.nameKey)" class="product-image" />
+          <!-- Shimmer overlay on hover -->
+          <div class="product-shimmer"></div>
+        </div>
+
+        <!-- Product Name -->
+        <h3 class="product-name">{{ i18n.t(product.nameKey) }}</h3>
+
+        <!-- Product Description -->
+        <p class="product-description">
+          {{ i18n.t(product.descKey) }}
+        </p>
+
+        <!-- Discover More Button -->
+        <a [routerLink]="['/product', product.slug]" class="product-link btn-magnetic btn-shine">
+          {{ i18n.t('products.discoverMore') }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

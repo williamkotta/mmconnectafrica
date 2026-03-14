@@ -1,0 +1,87 @@
+/* Testimonials component styles */
+
+:host {
+  display: block;
+}
+
+.testimonials-section {
+  @apply relative py-20 lg:py-28 bg-gradient-to-b from-white to-primary-50/20 dark:from-secondary-900 dark:to-secondary-800/30 overflow-hidden transition-colors duration-300;
+}
+
+.testimonials-bg-grid {
+  @apply absolute inset-0 opacity-30 dark:opacity-15 pointer-events-none;
+  background-image: linear-gradient(rgba(203, 213, 225, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(203, 213, 225, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.testimonials-container {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.testimonials-header {
+  @apply text-center mb-16;
+}
+
+.testimonials-badge {
+  @apply mb-4 inline-flex;
+}
+
+.testimonials-heading {
+  @apply text-3xl lg:text-4xl font-extrabold text-secondary-900 dark:text-white mb-4 font-display tracking-tight;
+}
+
+.testimonials-sub {
+  @apply text-lg text-secondary-500 dark:text-secondary-400 font-body;
+}
+
+.testimonials-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16;
+}
+
+.testimonial-card {
+  @apply bg-white dark:bg-secondary-800 rounded-2xl p-7 border border-secondary-100 dark:border-secondary-700 relative overflow-hidden;
+}
+
+.testimonial-quote {
+  @apply absolute top-4 right-4 text-4xl text-primary-100 dark:text-primary-900/40 font-serif select-none transition-colors duration-300;
+}
+
+.testimonial-card:hover .testimonial-quote {
+  @apply text-primary-200 dark:text-primary-800/50;
+}
+
+.testimonial-stars {
+  @apply flex gap-1 mb-4;
+}
+
+.testimonial-star {
+  @apply text-yellow-400 transition-transform duration-300 inline-block text-lg;
+}
+
+.testimonial-star:hover {
+  @apply scale-125;
+}
+
+.testimonial-comment {
+  @apply text-secondary-600 dark:text-secondary-400 mb-5 leading-relaxed italic font-body relative z-10;
+}
+
+.testimonial-author {
+  @apply flex items-center gap-3;
+}
+
+.testimonial-avatar {
+  @apply w-11 h-11 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white font-bold text-sm transition-all duration-300;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+  @apply scale-110 shadow-lg shadow-primary-200 dark:shadow-primary-900;
+}
+
+.testimonial-author-name {
+  @apply font-semibold text-secondary-900 dark:text-white text-sm font-display;
+}
+
+.testimonial-author-role {
+  @apply text-secondary-500 dark:text-secondary-400 text-xs font-body;
+}

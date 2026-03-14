@@ -1,0 +1,197 @@
+<header
+  class="header-bar"
+  [class.shadow-sm]="!scrolled()"
+  [class.header-scrolled]="scrolled()"
+>
+  <div class="header-inner">
+    <div class="header-row">
+
+      <!-- Logo -->
+      <a routerLink="/" class="header-logo">
+        <img
+          src="assets/kuzalogo.png"
+          alt="KUZA Logo"
+          class="header-logo-img"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <a
+          (click)="scrollToSection('home')"
+          class="nav-link link-underline"
+          [class.nav-active]="activeSection() === 'home'"
+        >
+          {{ i18n.t('nav.home') }}
+        </a>
+        <a
+          (click)="scrollToSection('about')"
+          class="nav-link link-underline"
+          [class.nav-active]="activeSection() === 'about'"
+        >
+          {{ i18n.t('nav.about') }}
+        </a>
+        <a
+          (click)="scrollToSection('products')"
+          class="nav-link link-underline"
+          [class.nav-active]="activeSection() === 'products'"
+        >
+          {{ i18n.t('nav.products') }}
+        </a>
+        <a
+          (click)="scrollToSection('team')"
+          class="nav-link link-underline"
+          [class.nav-active]="activeSection() === 'team'"
+        >
+          {{ i18n.t('nav.team') }}
+        </a>
+        <a
+          (click)="scrollToSection('contact')"
+          class="nav-link link-underline"
+          [class.nav-active]="activeSection() === 'contact'"
+        >
+          {{ i18n.t('nav.contact') }}
+        </a>
+        <a
+          (click)="scrollToSection('joinus')"
+          class="nav-cta btn-ripple"
+        >
+          {{ i18n.t('cta.joinUs') }}
+        </a>
+      </nav>
+
+      <!-- Right Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button
+          (click)="themeService.toggle()"
+          class="theme-btn theme-toggle"
+          [attr.aria-label]="themeService.isDark() ? 'Switch to light mode' : 'Switch to dark mode'"
+        >
+          <!-- Sun icon (shown in dark mode) -->
+          <svg *ngIf="themeService.isDark()" class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg *ngIf="!themeService.isDark()" class="theme-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </button>
+
+        <!-- Language Dropdown -->
+        <div class="lang-dropdown">
+          <button
+            (click)="toggleLanguageDropdown($event)"
+            class="lang-btn"
+          >
+            <span class="lang-flag">{{ i18n.currentLanguageOption().flag }}</span>
+            <span class="lang-name">{{ i18n.currentLanguageOption().nativeName }}</span>
+            <svg
+              class="lang-chevron"
+              [class.rotate-180]="langDropdownOpen()"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Dropdown Panel -->
+          <div
+            *ngIf="langDropdownOpen()"
+            class="lang-panel"
+          >
+            <div class="lang-panel-header">
+              <p class="lang-panel-title">{{ i18n.t('nav.language') }}</p>
+            </div>
+            <button
+              *ngFor="let lang of i18n.languages"
+              (click)="selectLanguage(lang.code)"
+              class="lang-option"
+              [class.lang-active]="i18n.currentLanguage() === lang.code"
+              [class.lang-inactive]="i18n.currentLanguage() !== lang.code"
+            >
+              <span class="lang-option-flag">{{ lang.flag }}</span>
+              <span>{{ lang.nativeName }}</span>
+              <span class="lang-option-alt" *ngIf="i18n.currentLanguage() !== lang.code">({{ lang.label }})</span>
+              <svg
+                *ngIf="i18n.currentLanguage() === lang.code"
+                class="lang-check"
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          (click)="toggleMobileMenu()"
+          class="mobile-menu-btn"
+        >
+          <svg *ngIf="!mobileMenuOpen()" class="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg *ngIf="mobileMenuOpen()" class="mobile-menu-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div
+      *ngIf="mobileMenuOpen()"
+      class="mobile-nav animate-in"
+    >
+      <nav class="mobile-nav-list">
+        <a
+          (click)="scrollToSection('home'); mobileMenuOpen.set(false)"
+          class="mobile-nav-link"
+          [class.nav-active]="activeSection() === 'home'"
+          [class.font-semibold]="activeSection() === 'home'"
+        >
+          {{ i18n.t('nav.home') }}
+        </a>
+        <a
+          (click)="scrollToSection('about'); mobileMenuOpen.set(false)"
+          class="mobile-nav-link"
+          [class.nav-active]="activeSection() === 'about'"
+          [class.font-semibold]="activeSection() === 'about'"
+        >
+          {{ i18n.t('nav.about') }}
+        </a>
+        <a
+          (click)="scrollToSection('products'); mobileMenuOpen.set(false)"
+          class="mobile-nav-link"
+          [class.nav-active]="activeSection() === 'products'"
+          [class.font-semibold]="activeSection() === 'products'"
+        >
+          {{ i18n.t('nav.products') }}
+        </a>
+        <a
+          (click)="scrollToSection('team'); mobileMenuOpen.set(false)"
+          class="mobile-nav-link"
+          [class.nav-active]="activeSection() === 'team'"
+          [class.font-semibold]="activeSection() === 'team'"
+        >
+          {{ i18n.t('nav.team') }}
+        </a>
+        <a
+          (click)="scrollToSection('contact'); mobileMenuOpen.set(false)"
+          class="mobile-nav-link"
+          [class.nav-active]="activeSection() === 'contact'"
+          [class.font-semibold]="activeSection() === 'contact'"
+        >
+          {{ i18n.t('nav.contact') }}
+        </a>
+        <a
+          (click)="scrollToSection('joinus'); mobileMenuOpen.set(false)"
+          class="mobile-nav-cta btn-ripple"
+        >
+          {{ i18n.t('cta.joinUs') }}
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>

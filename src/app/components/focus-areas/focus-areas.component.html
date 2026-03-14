@@ -1,0 +1,22 @@
+<section class="focus-section">
+  <div class="focus-container">
+    <div class="focus-grid">
+      <div *ngFor="let area of focusAreas; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 150" class="focus-item group">
+        <!-- Decorative number -->
+        <div class="focus-number">0{{ i + 1 }}</div>
+        <div class="focus-content">
+          <!-- Icon circle -->
+          <div class="focus-icon-circle">
+            <svg class="focus-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="focus-title">{{ i18n.t(area.titleKey) }}</h3>
+          <p class="focus-description">
+            {{ i18n.t(area.descKey) }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

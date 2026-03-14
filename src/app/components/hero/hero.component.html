@@ -1,0 +1,88 @@
+<section class="hero-section">
+  <!-- Modern Geometric Background -->
+  <div class="hero-bg">
+    <!-- Animated gradient orbs -->
+    <div class="hero-orb-right animate-drift"></div>
+    <div class="hero-orb-left animate-float-delayed"></div>
+    <!-- Dot grid pattern -->
+    <div class="hero-bg-dots"></div>
+    <!-- Subtle concentric rings -->
+    <div class="hero-ring-lg"></div>
+    <div class="hero-ring-sm"></div>
+    <!-- Floating particles -->
+    <div class="hero-particle-1 animate-drift"></div>
+    <div class="hero-particle-2 animate-float"></div>
+    <div class="hero-particle-3 animate-float-delayed"></div>
+  </div>
+
+  <div class="hero-container">
+    <!-- News Badge with scan effect -->
+    <div appScrollReveal="fade-down" [revealDelay]="100" class="hero-badge-wrapper">
+      <div class="hero-badge scan-effect">
+        <span class="hero-badge-label">{{ i18n.t('hero.badge') }}</span>
+        <span class="hero-badge-text news-text" [class.news-visible]="newsVisible()" [class.news-hidden]="!newsVisible()">{{ currentNewsText }}</span>
+        <svg class="hero-badge-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </div>
+    </div>
+
+    <!-- Main Heading with Typewriter + Gradient Text -->
+    <div appScrollReveal="fade-up" [revealDelay]="200" class="hero-heading-wrapper">
+      <h1 class="hero-heading">
+        <span class="hero-heading-text" [appTypewriter]="i18n.t('hero.heading')" [typeDelay]="600" [typeSpeed]="40" [typeCursor]="true"></span>
+      </h1>
+    </div>
+
+    <!-- Animated subheading line -->
+    <div appScrollReveal="fade-up" [revealDelay]="400" class="hero-line-wrapper">
+      <div class="hero-line clip-reveal"></div>
+    </div>
+
+    <!-- Description with text glow -->
+    <p appScrollReveal="fade-up" [revealDelay]="500" class="hero-description text-glow">
+      {{ i18n.t('hero.description') }}
+    </p>
+
+    <!-- CTA Buttons - Modern dual-button layout -->
+    <div appScrollReveal="fade-up" [revealDelay]="650" class="hero-cta-wrapper">
+      <button (click)="scrollTo('joinus')" class="hero-cta-btn group btn-magnetic btn-shine">
+        <span class="hero-cta-content">
+          {{ i18n.t('hero.cta') }}
+          <svg class="hero-cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- Scroll Down Arrow -->
+    <div appScrollReveal="fade" [revealDelay]="850" class="hero-scroll-wrapper">
+      <button (click)="scrollTo('about')" class="hero-scroll-btn group" aria-label="Scroll to next section">
+        <svg class="hero-scroll-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 5l-7 7-7-7"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 13l-7 7-7-7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Decorative Curve - Full Width -->
+  <div class="hero-curve">
+    <img src="assets/30.png" alt="" class="hero-curve-img" />
+  </div>
+
+  <!-- Hero Image - Full Width with Modern Wave -->
+  <div class="hero-image-section">
+    <svg class="hero-wave" viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,0 L0,60 Q360,100 720,60 Q1080,20 1440,60 L1440,0 Z" fill="currentColor"/>
+    </svg>
+    <div class="hero-image-wrapper ken-burns">
+      <img
+        src="assets/mamamboga.png"
+        alt="Market vendor"
+        class="hero-main-image"
+        width="1728"
+        height="1050"
+      />
+      <!-- Gradient overlay on image -->
+      <div class="hero-image-overlay"></div>
+    </div>
+  </div>
+</section>

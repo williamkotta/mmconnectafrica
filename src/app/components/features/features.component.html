@@ -1,0 +1,45 @@
+<section class="features-section">
+  <!-- Background grid -->
+  <div class="features-bg-grid"></div>
+
+  <div class="features-container">
+    <!-- Section Header -->
+    <div appScrollReveal="fade-up" class="features-header">
+      <span class="section-badge features-badge">{{ i18n.t('features.heading') }}</span>
+      <h2 class="features-heading">
+        {{ i18n.t('features.heading') }}
+      </h2>
+      <p class="features-sub">
+        {{ i18n.t('features.sub') }}
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="features-grid">
+      <div *ngFor="let feature of features; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 100" class="feature-card group hover-tilt gradient-border">
+        <!-- Scan line on hover -->
+        <div class="feature-scan scan-effect"></div>
+        <div class="feature-content">
+          <div class="feature-icon-box">
+            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">{{ i18n.t(feature.titleKey) }}</h3>
+          <p class="feature-description">{{ i18n.t(feature.descriptionKey) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section with Counter Animation -->
+    <div appScrollReveal="fade-up" [revealDelay]="200" class="features-stats-wrapper">
+      <h3 class="features-stats-heading">{{ i18n.t('features.whyChoose') }}</h3>
+      <div class="features-stats-grid">
+        <div *ngFor="let stat of stats; let i = index" appScrollReveal="zoom-in" [revealDelay]="i * 150" class="stat-box group counter-box">
+          <div class="stat-value gradient-text" #counterEl>{{ stat.value }}</div>
+          <p class="stat-label">{{ i18n.t(stat.labelKey) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

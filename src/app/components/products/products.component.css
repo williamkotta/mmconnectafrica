@@ -1,0 +1,87 @@
+/* Products component styles */
+
+:host {
+  display: block;
+}
+
+.products-section {
+  @apply relative bg-white dark:bg-secondary-900 py-20 lg:py-28 overflow-hidden transition-colors duration-300;
+}
+
+.products-bg-dots {
+  @apply absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none;
+  background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.products-bg-orb {
+  @apply absolute -top-40 -right-40 w-[400px] h-[400px] rounded-full bg-primary-50/50 dark:bg-primary-900/20 blur-3xl pointer-events-none;
+}
+
+.products-container {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.products-header {
+  @apply text-center mb-16;
+}
+
+.products-badge {
+  @apply mb-4 inline-flex;
+}
+
+.products-heading {
+  @apply text-4xl lg:text-5xl font-extrabold text-secondary-900 dark:text-white mb-4 font-display tracking-tight;
+}
+
+.products-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.product-card {
+  @apply relative bg-gradient-to-br from-[#FFF9E6] to-[#FFFDF5] dark:from-secondary-800 dark:to-secondary-700 rounded-2xl p-6 overflow-hidden;
+}
+
+.product-scan {
+  @apply absolute inset-0 opacity-0 transition-opacity duration-500;
+}
+
+.product-card:hover .product-scan {
+  @apply opacity-100;
+}
+
+.product-image-wrapper {
+  @apply relative h-40 bg-gradient-to-br from-primary-700 to-primary-900 rounded-xl mb-6 overflow-hidden flex items-center justify-center p-4 shadow-lg;
+}
+
+.product-image {
+  @apply h-28 w-auto object-contain transition-transform duration-700;
+}
+
+.product-card:hover .product-image {
+  @apply scale-110 rotate-2;
+}
+
+.product-shimmer {
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full transition-transform duration-1000 ease-in-out;
+}
+
+.product-card:hover .product-shimmer {
+  @apply translate-x-full;
+}
+
+.product-name {
+  @apply text-2xl font-bold text-secondary-900 dark:text-white mb-3 font-display transition-colors duration-300;
+}
+
+.product-card:hover .product-name {
+  @apply text-primary-700 dark:text-primary-400;
+}
+
+.product-description {
+  @apply text-secondary-600 dark:text-secondary-400 mb-6 text-sm leading-relaxed font-body;
+}
+
+.product-link {
+  @apply inline-block bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 text-sm shadow-md cursor-pointer;
+}

@@ -1,0 +1,72 @@
+<section class="reviews-section">
+  <div class="reviews-bg-dots"></div>
+
+  <div class="reviews-container">
+    <!-- Section Header -->
+    <div appScrollReveal="fade-up" class="reviews-header">
+      <span class="section-badge reviews-badge">Reviews</span>
+      <h2 class="reviews-heading">{{ i18n.t('reviews.heading') }}</h2>
+    </div>
+
+    <!-- Reviews Carousel -->
+    <div class="reviews-carousel">
+      <!-- Desktop View - Show All 3 -->
+      <div class="reviews-desktop-grid">
+        <div *ngFor="let review of reviews; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 150" class="review-card group hover-tilt gradient-border">
+          <!-- Avatar Image -->
+          <div class="review-avatar">
+            <img [src]="review.image" [alt]="review.name" class="review-avatar-img" />
+          </div>
+          <!-- Name -->
+          <h3 class="review-name">{{ review.name }}</h3>
+          <!-- Role -->
+          <p class="review-role">{{ review.role }}</p>
+          <!-- Review Text -->
+          <p class="review-text">
+            "{{ review.text }}"
+          </p>
+        </div>
+      </div>
+
+      <!-- Mobile View - Carousel -->
+      <div class="reviews-mobile-wrapper">
+        <div class="review-mobile-card">
+          <!-- Avatar Image -->
+          <div class="review-mobile-avatar">
+            <img [src]="reviews[currentSlide()].image" [alt]="reviews[currentSlide()].name" class="review-avatar-img" />
+          </div>
+          <!-- Name -->
+          <h3 class="review-name">{{ reviews[currentSlide()].name }}</h3>
+          <!-- Role -->
+          <p class="review-role">{{ reviews[currentSlide()].role }}</p>
+          <!-- Review Text -->
+          <p class="review-text">
+            "{{ reviews[currentSlide()].text }}"
+          </p>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="reviews-dots">
+          <button
+            *ngFor="let dot of [0, 1, 2]"
+            (click)="goToSlide(dot)"
+            class="review-dot"
+            [class.review-dot-active]="currentSlide() === dot"
+            [class.dot-inactive]="currentSlide() !== dot"
+          ></button>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation Dots -->
+      <div class="reviews-desktop-dots">
+        <button
+          *ngFor="let dot of [0, 1, 2]"
+          (click)="goToSlide(dot)"
+          class="review-dot"
+          [class.review-dot-active]="currentSlide() === dot"
+          [class.dot-inactive]="currentSlide() !== dot"
+        ></button>
+      </div>
+    </div>
+  </div>
+</section>

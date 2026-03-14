@@ -1,0 +1,83 @@
+/* Team component styles */
+
+:host {
+  display: block;
+}
+
+.team-section {
+  @apply relative py-20 lg:py-28 bg-gradient-to-b from-white to-secondary-50/30 overflow-hidden;
+}
+
+.team-bg-dots {
+  @apply absolute inset-0 opacity-15 pointer-events-none;
+  background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.team-container {
+  @apply relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.team-header {
+  @apply text-center mb-16;
+}
+
+.team-badge {
+  @apply mb-4 inline-flex;
+}
+
+.team-heading {
+  @apply text-3xl lg:text-4xl font-extrabold text-secondary-900 font-display tracking-tight;
+}
+
+.team-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12;
+}
+
+.team-member {
+  @apply flex flex-col items-center cursor-default;
+}
+
+.member-avatar-wrapper {
+  @apply relative mb-5;
+}
+
+.member-avatar {
+  @apply w-40 h-40 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center overflow-hidden transition-all duration-700;
+}
+
+.member-avatar:hover {
+  @apply shadow-2xl shadow-primary-200 scale-105;
+}
+
+.member-initials {
+  @apply text-4xl font-extrabold text-white font-display transition-transform duration-500;
+}
+
+.team-member:hover .member-initials {
+  @apply scale-110;
+}
+
+.member-ring {
+  @apply absolute -inset-2 rounded-full border-2 border-dashed border-primary-200 opacity-0 transition-all duration-500;
+}
+
+.team-member:hover .member-ring {
+  @apply opacity-100;
+}
+
+.member-info {
+  @apply text-center;
+}
+
+.member-name {
+  @apply text-lg font-bold text-primary-800 font-display transition-colors duration-300;
+}
+
+.team-member:hover .member-name {
+  @apply text-primary-600;
+}
+
+.member-role {
+  @apply text-primary-500 text-sm font-medium font-body;
+}

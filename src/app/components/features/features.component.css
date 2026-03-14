@@ -1,0 +1,111 @@
+/* Features component styles */
+
+:host {
+  display: block;
+}
+
+.features-section {
+  @apply relative py-20 lg:py-28 bg-gradient-to-b from-white via-primary-50/20 to-white dark:from-secondary-900 dark:via-secondary-800/30 dark:to-secondary-900 overflow-hidden transition-colors duration-300;
+}
+
+.features-bg-grid {
+  @apply absolute inset-0 opacity-40 dark:opacity-20 pointer-events-none;
+  background-image: linear-gradient(rgba(203, 213, 225, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(203, 213, 225, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.features-container {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.features-header {
+  @apply text-center mb-16;
+}
+
+.features-badge {
+  @apply mb-4 inline-flex;
+}
+
+.features-heading {
+  @apply text-3xl lg:text-4xl font-extrabold text-secondary-900 dark:text-white mb-4 font-display tracking-tight;
+}
+
+.features-sub {
+  @apply text-lg text-secondary-500 dark:text-secondary-400 max-w-2xl mx-auto font-body;
+}
+
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.feature-card {
+  @apply relative bg-white dark:bg-secondary-800 border border-secondary-100 dark:border-secondary-700 rounded-2xl p-8 overflow-hidden;
+}
+
+.feature-scan {
+  @apply absolute inset-0 opacity-0 transition-opacity duration-700 pointer-events-none;
+}
+
+.feature-card:hover .feature-scan {
+  @apply opacity-100;
+}
+
+.feature-content {
+  @apply relative;
+}
+
+.feature-icon-box {
+  @apply w-14 h-14 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/50 dark:to-primary-800/50 rounded-xl flex items-center justify-center mb-5 transition-all duration-500;
+}
+
+.feature-card:hover .feature-icon-box {
+  @apply from-primary-500 to-primary-700 shadow-lg shadow-primary-200 dark:shadow-primary-900 scale-110;
+}
+
+.feature-icon {
+  @apply w-7 h-7 text-primary-600 dark:text-primary-400 transition-colors duration-300;
+}
+
+.feature-card:hover .feature-icon {
+  @apply text-white;
+}
+
+.feature-title {
+  @apply text-xl font-bold text-secondary-900 dark:text-white mb-2 font-display transition-colors duration-300;
+}
+
+.feature-card:hover .feature-title {
+  @apply text-primary-600 dark:text-primary-400;
+}
+
+.feature-description {
+  @apply text-secondary-500 dark:text-secondary-400 leading-relaxed font-body;
+}
+
+.features-stats-wrapper {
+  @apply mt-20 pt-16 border-t border-secondary-100 dark:border-secondary-700;
+}
+
+.features-stats-heading {
+  @apply text-2xl font-extrabold text-secondary-900 dark:text-white mb-10 text-center font-display;
+}
+
+.features-stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.stat-box {
+  @apply text-center;
+}
+
+.stat-value {
+  @apply text-4xl font-extrabold mb-2 transition-transform duration-300 font-display;
+}
+
+.stat-box:hover .stat-value {
+  @apply scale-110;
+}
+
+.stat-label {
+  @apply text-secondary-500 dark:text-secondary-400 font-medium font-body;
+}

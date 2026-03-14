@@ -1,0 +1,135 @@
+<div class="ph-page">
+  <div class="ph-container">
+    <!-- Header Section -->
+    <div class="ph-header">
+      <div class="ph-icon-wrapper">
+        <svg class="ph-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      <h1 class="ph-title">{{ title }}</h1>
+      <p class="ph-description">
+        {{ i18n.t('placeholder.description') }}
+      </p>
+      <div class="ph-tip-box">
+        <p class="ph-tip-text">
+          {{ i18n.t('placeholder.tip') }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Show Preview Button -->
+    <div class="ph-preview-btn-wrapper" *ngIf="preview">
+      <button
+        (click)="togglePreview()"
+        class="ph-preview-btn"
+      >
+        <svg class="ph-preview-btn-icon" [class.rotate-180]="showPreview()" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+        {{ showPreview() ? i18n.t('placeholder.hidePreview') : i18n.t('placeholder.showPreview') }}
+        <svg class="ph-preview-chevron" [class.rotate-180]="showPreview()" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Preview Section (Expert Detail Style) -->
+    <div *ngIf="showPreview() && preview" class="preview-panel">
+      <!-- Back Button -->
+      <a
+        routerLink="/"
+        class="ph-back-link"
+      >
+        <svg class="ph-back-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        {{ i18n.t('placeholder.backHome') }}
+      </a>
+
+      <!-- Hero Card -->
+      <div class="ph-hero-card">
+        <div class="ph-hero-inner">
+          <!-- Image -->
+          <div class="ph-hero-image-wrapper">
+            <img
+              [src]="preview.image"
+              [alt]="title"
+              class="ph-hero-image"
+            />
+            <div class="ph-hero-image-overlay"></div>
+          </div>
+          <!-- Info -->
+          <div class="ph-hero-info">
+            <span class="ph-hero-badge">
+              {{ title }}
+            </span>
+            <h2 class="ph-hero-title">{{ title }}</h2>
+            <p class="ph-hero-subtitle">{{ preview.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Section -->
+      <div class="ph-section-card">
+        <h2 class="ph-section-title">
+          <svg class="ph-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+          {{ i18n.t('placeholder.overview') }}
+        </h2>
+        <p class="ph-overview-text">{{ preview.description }}</p>
+      </div>
+
+      <!-- Key Highlights -->
+      <div class="ph-section-card">
+        <h2 class="ph-section-title-highlights">
+          <svg class="ph-section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+          {{ i18n.t('placeholder.highlights') }}
+        </h2>
+        <ul class="ph-highlights-list">
+          <li *ngFor="let item of preview.highlights" class="ph-highlight-item">
+            <span class="ph-highlight-check">
+              <svg class="ph-highlight-check-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+            <span class="ph-highlight-text">{{ item }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="ph-contact-cta">
+        <h3 class="ph-contact-title">{{ i18n.t('placeholder.getInTouch') }}</h3>
+        <p class="ph-contact-text">{{ i18n.t('placeholder.contactMessage') }}</p>
+        <a
+          routerLink="/"
+          fragment="contact"
+          class="ph-contact-btn"
+        >
+          <svg class="ph-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          {{ i18n.t('placeholder.sendMessage') }}
+        </a>
+      </div>
+
+      <!-- Back to Home (bottom) -->
+      <div class="ph-bottom-back">
+        <a
+          routerLink="/"
+          class="ph-bottom-link"
+        >
+          <svg class="ph-bottom-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          {{ i18n.t('placeholder.backHome') }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="home-wrapper">
+  <!-- Hero Section -->
+  <div id="home">
+    <app-hero></app-hero>
+  </div>
+  
+  <!-- Mission & Vision / About Section -->
+  <div id="about">
+    <app-mission-vision></app-mission-vision>
+  </div>
+
+  <!-- Products Section -->
+  <div id="products">
+    <app-products></app-products>
+  </div>
+
+  <!-- Focus Areas Section -->
+  <app-focus-areas></app-focus-areas>
+
+  <!-- Team / CTA Section -->
+  <div>
+    <app-cta-section></app-cta-section>
+  </div>
+
+  <!-- Reviews Section -->
+  <app-reviews></app-reviews>
+
+  <!-- Comment / Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-bg-dots"></div>
+    <div appScrollReveal="fade-up" class="contact-container">
+      <div class="contact-header">
+        <span class="contact-badge section-badge">{{ i18n.t('nav.contact') }}</span>
+        <h2 class="contact-heading">{{ i18n.t('comment.heading') }}</h2>
+      </div>
+      <form class="contact-form gradient-border">
+        <!-- Name -->
+        <div>
+          <label for="contact-name" class="contact-label">{{ i18n.t('comment.name') }}</label>
+          <input
+            id="contact-name"
+            type="text"
+            [placeholder]="i18n.t('comment.namePlaceholder')"
+            class="contact-input"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="contact-email" class="contact-label">{{ i18n.t('comment.email') }}</label>
+          <input
+            id="contact-email"
+            type="email"
+            [placeholder]="i18n.t('comment.emailPlaceholder')"
+            class="contact-input"
+          />
+        </div>
+
+        <!-- Comment -->
+        <div>
+          <label for="contact-comment" class="contact-label">{{ i18n.t('comment.comment') }}</label>
+          <textarea
+            id="contact-comment"
+            rows="6"
+            [placeholder]="i18n.t('comment.commentPlaceholder')"
+            class="contact-textarea"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="contact-submit-wrapper">
+          <button
+            type="submit"
+            class="contact-submit-btn btn-magnetic btn-shine"
+          >
+            {{ i18n.t('comment.post') }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>

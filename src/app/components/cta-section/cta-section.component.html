@@ -1,0 +1,92 @@
+<section class="cta-section">
+  <div class="cta-container">
+    <!-- Community Image with Ken Burns -->
+    <div appScrollReveal="zoom-in" class="cta-image-wrapper ken-burns">
+      <img
+        src="assets/6.png"
+        alt="Community"
+        class="cta-image"
+      />
+      <div class="cta-image-overlay"></div>
+    </div>
+
+    <!-- Experts Section -->
+    <div class="cta-experts">
+      <div appScrollReveal="fade-up" class="cta-experts-header">
+        <span class="section-badge cta-experts-badge">{{ i18n.t('nav.team') }}</span>
+        <h2 id="team" class="cta-experts-heading">{{ i18n.t('cta.expertsHeading') }}</h2>
+      </div>
+
+      <div class="cta-experts-grid">
+        <div
+          *ngFor="let expert of experts; let i = index"
+          appScrollReveal="fade-up"
+          [revealDelay]="i * 100"
+          class="cta-expert-card group"
+        >
+          <!-- Circular Avatar with gradient border -->
+          <div class="cta-expert-avatar-wrapper">
+            <div class="cta-expert-avatar">
+              <img
+                [src]="expert.image"
+                [alt]="expert.name"
+                class="cta-expert-avatar-img"
+              />
+            </div>
+            <!-- Online status dot -->
+            <div class="cta-expert-status"></div>
+          </div>
+          <!-- Name & Role -->
+          <div class="cta-expert-info">
+            <h3 class="cta-expert-name">{{ expert.name }}</h3>
+            <p class="cta-expert-title">{{ expert.title }}</p>
+          </div>
+          <!-- View More Link -->
+          <a
+            [routerLink]="['/expert', expert.id]"
+            class="cta-expert-link"
+          >
+            {{ i18n.t('cta.viewMore') }}
+            <svg class="cta-expert-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text Content -->
+    <p id="joinus" appScrollReveal="fade-up" class="cta-body-text">
+      {{ i18n.t('cta.bodyText') }}
+    </p>
+
+    <!-- CTA (call to action) Box - Glass morphism style -->
+    <div appScrollReveal="zoom-in" [revealDelay]="150" class="cta-box group">
+      <!-- Animated background pattern -->
+      <div class="cta-box-grid"></div>
+      <div class="cta-box-orb-top animate-drift"></div>
+      <div class="cta-box-orb-bottom animate-float"></div>
+
+      <div class="cta-box-content">
+        <h2 class="cta-box-heading text-glow">{{ i18n.t('cta.joinUs') }}</h2>
+        <p class="cta-box-sub">{{ i18n.t('cta.joinUsSub') }}</p>
+
+        <!-- Email Signup Form -->
+        <div class="cta-form">
+          <input
+            [(ngModel)]="email"
+            type="email"
+            [placeholder]="i18n.t('cta.emailPlaceholder')"
+            class="cta-email-input"
+          />
+          <button
+            (click)="handleSignup()"
+            class="cta-submit-btn btn-magnetic btn-shine"
+          >
+            {{ i18n.t('cta.createAccount') }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

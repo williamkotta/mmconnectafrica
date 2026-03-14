@@ -1,0 +1,89 @@
+:host {
+  display: block;
+}
+
+.footer-section {
+  @apply relative bg-gradient-to-b from-primary-800 to-primary-900 dark:from-secondary-900 dark:to-black text-white overflow-hidden transition-colors duration-300;
+}
+
+.footer-bg-grid {
+  @apply absolute inset-0 opacity-5 pointer-events-none;
+  background-image: linear-gradient(rgba(203, 213, 225, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(203, 213, 225, 0.3) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.footer-bg-orb {
+  @apply absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-primary-700/30 dark:bg-primary-900/20 blur-3xl pointer-events-none;
+}
+
+.footer-container {
+  @apply relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+}
+
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14;
+}
+
+.footer-brand {
+  @apply lg:col-span-1;
+}
+
+.footer-logo-wrapper {
+  @apply mb-5;
+}
+
+.footer-logo {
+  @apply h-12 w-auto;
+}
+
+.footer-address {
+  @apply text-white/60 text-sm mb-5 leading-relaxed font-body;
+}
+
+.footer-contact-info {
+  @apply space-y-2 text-sm font-body;
+}
+
+.footer-contact-line {
+  @apply text-white/60;
+}
+
+.footer-contact-label {
+  @apply font-semibold text-white/80;
+}
+
+.footer-social {
+  @apply flex items-center gap-3 mt-5;
+}
+
+.footer-social-link {
+  @apply w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-primary-500 transition-all duration-300 hover:scale-110;
+}
+
+.footer-social-icon {
+  @apply w-4 h-4;
+}
+
+.footer-col-title {
+  @apply font-bold text-lg mb-5 font-display;
+}
+
+.footer-col-list {
+  @apply space-y-3;
+}
+
+.footer-col-link {
+  @apply text-white/60 hover:text-white transition-colors text-sm font-body hover:translate-x-1 inline-block transition-transform duration-200;
+}
+
+.footer-bottom {
+  @apply border-t border-white/10 pt-8;
+}
+
+.footer-bottom-text {
+  @apply text-center text-white/50 text-sm font-body;
+}
+
+.footer-copyright {
+  @apply text-center text-white/40 text-sm mt-2 font-body;
+}
