@@ -48,4 +48,4 @@ jobs:
         script: |
           # We don't use sudo here because mmkuza already owns the folder
           chown -R mmkuza:www-data /var/www/test.kuza.co.tz
-          chmod -R 755 /var/test.kuza.co.tz
+          chmod -R 755 /var/www/test.kuza.co.tz
