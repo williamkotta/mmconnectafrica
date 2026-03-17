@@ -25,7 +25,7 @@ export const TRANSLATIONS: TranslationMap = {
     'hero.news2': 'New partnership with local SMEs for digital inclusion',
     'hero.news3': 'Kuza launches youth empowerment program across East Africa',
     'hero.news4': 'Join our upcoming webinar on inclusive business strategies',
-    'hero.heading': 'Grow Further.',
+    'hero.heading': 'Grow Further',
     'hero.description': "At Kuza, we're dedicated to a future where everyone—regardless of background or ability—is valued, empowered, and included. Guided by inclusivity, we believe true progress comes from uplifting diverse voices and creating products that serve everyone's unique needs.",
     'hero.cta': 'Join Us',
     'hero.ctaSub': 'To get more updates in your email',
