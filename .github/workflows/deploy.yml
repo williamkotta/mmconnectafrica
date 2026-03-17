@@ -37,7 +37,7 @@ jobs:
         remote_path: /var/www/test.kuza.co.tz/browser/
         switches: "-avz --delete --exclude='.git/' --no-perms --checksum"
 
-    # 5. Set Permissions1
+    # 5. Set Permissions
     - name: Set permissions on server
       uses: appleboy/ssh-action@v1.0.3
       with:
