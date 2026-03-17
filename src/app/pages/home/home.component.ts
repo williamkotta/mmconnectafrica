@@ -5,7 +5,6 @@ import { MissionVisionComponent } from '../../components/mission-vision/mission-
 import { ProductsComponent } from '../../components/products/products.component';
 import { FocusAreasComponent } from '../../components/focus-areas';
 import { CtaSectionComponent } from '../../components/cta-section/cta-section.component';
-import { ReviewsComponent } from '../../components/reviews';
 import { TranslationService } from '../../services/translation.service';
 import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive';
 
@@ -19,7 +18,6 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
     ProductsComponent,
     FocusAreasComponent,
     CtaSectionComponent,
-    ReviewsComponent,
     ScrollRevealDirective,
   ],
   templateUrl: './home.component.html',

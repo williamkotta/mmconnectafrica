@@ -39,13 +39,6 @@
           {{ i18n.t('nav.products') }}
         </a>
         <a
-          (click)="scrollToSection('team')"
-          class="nav-link link-underline"
-          [class.nav-active]="activeSection() === 'team'"
-        >
-          {{ i18n.t('nav.team') }}
-        </a>
-        <a
           (click)="scrollToSection('contact')"
           class="nav-link link-underline"
           [class.nav-active]="activeSection() === 'contact'"
@@ -168,14 +161,6 @@
           [class.font-semibold]="activeSection() === 'products'"
         >
           {{ i18n.t('nav.products') }}
-        </a>
-        <a
-          (click)="scrollToSection('team'); mobileMenuOpen.set(false)"
-          class="mobile-nav-link"
-          [class.nav-active]="activeSection() === 'team'"
-          [class.font-semibold]="activeSection() === 'team'"
-        >
-          {{ i18n.t('nav.team') }}
         </a>
         <a
           (click)="scrollToSection('contact'); mobileMenuOpen.set(false)"

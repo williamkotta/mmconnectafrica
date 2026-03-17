@@ -194,7 +194,7 @@ export const TRANSLATIONS: TranslationMap = {
     'hero.news2': 'Ushirikiano mpya na SME za ndani kwa ushirikishwaji wa kidijitali',
     'hero.news3': 'Kuza inazindua programu ya kuwawezesha vijana Afrika Mashariki',
     'hero.news4': 'Jiunge na webina yetu kuhusu mikakati ya biashara jumuishi',
-    'hero.heading': 'Kukua Zaidi',
+    'hero.heading': 'Grow Further',
     'hero.description': 'Katika Kuza, tumejitolea kwa mustakabali ambapo kila mtu—bila kujali asili au uwezo—anathaminiwa, kuwekezwa nguvu, na kushirikishwa. Kwa kuongozwa na ujumuishaji, tunaamini maendeleo ya kweli yanatokana na kuinua sauti mbalimbali na kuunda bidhaa zinazohudumia mahitaji ya kipekee ya kila mtu.',
     'hero.cta': 'Jiunge Nasi',
     'hero.ctaSub': 'Ili kupata taarifa zaidi kwenye barua pepe yako',
