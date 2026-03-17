@@ -3,7 +3,9 @@ import {
   ElementRef,
   Input,
   OnInit,
+  OnChanges,
   OnDestroy,
+  SimpleChanges,
   inject,
   PLATFORM_ID,
 } from '@angular/core';
@@ -13,7 +15,7 @@ import { isPlatformBrowser } from '@angular/common';
   selector: '[appTypewriter]',
   standalone: true,
 })
-export class TypewriterDirective implements OnInit, OnDestroy {
+export class TypewriterDirective implements OnInit, OnChanges, OnDestroy {
   /** The full text to type out. If empty, uses the element's initial textContent. */
   @Input('appTypewriter') text = '';
   /** Delay in ms before typing starts */
@@ -35,6 +37,7 @@ export class TypewriterDirective implements OnInit, OnDestroy {
   private readonly timeouts: ReturnType<typeof setTimeout>[] = [];
   private readonly animFrames: number[] = [];
   private started = false;
+  private initialized = false;
 
   ngOnInit() {
     if (!isPlatformBrowser(this.platformId)) return;
@@ -53,6 +56,8 @@ export class TypewriterDirective implements OnInit, OnDestroy {
       element.classList.add('typewriter-cursor');
     }
 
+    this.initialized = true;
+
     if (this.typeOnScroll) {
       this.observer = new IntersectionObserver(
         (entries) => {
@@ -69,6 +74,24 @@ export class TypewriterDirective implements OnInit, OnDestroy {
       this.observer.observe(element);
     } else {
       this.scheduleStart();
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (!this.initialized) return;
+    if (changes['text'] && !changes['text'].firstChange) {
+      const newText = changes['text'].currentValue;
+      if (newText && newText !== this.text) {
+        this.text = newText;
+      }
+      // Clear any running animations and retype with new text
+      this.clearTimers();
+      const element = this.el.nativeElement as HTMLElement;
+      element.textContent = '';
+      if (this.typeCursor) {
+        element.classList.add('typewriter-cursor');
+      }
+      this.typeOut();
     }
   }
 
@@ -124,7 +147,13 @@ export class TypewriterDirective implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.observer?.disconnect();
+    this.clearTimers();
+  }
+
+  private clearTimers() {
     this.timeouts.forEach((t) => clearTimeout(t));
+    this.timeouts.length = 0;
     this.animFrames.forEach((f) => cancelAnimationFrame(f));
+    this.animFrames.length = 0;
   }
 }
