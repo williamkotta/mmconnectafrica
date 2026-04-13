@@ -1,4 +1,4 @@
-# kuza website
+## kuza website
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
 ng --version 21.2.2
@@ -8,7 +8,7 @@ node --version 24.12.0
 
 To start a local development server, run:
 
-```bash
+```bash template
 ng serve
 ```
 

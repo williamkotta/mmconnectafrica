@@ -21,7 +21,7 @@ export class CtaSectionComponent {
       alert(`Welcome! Check ${emailValue} for more updates.`);
       this.email.set('');
     } else {
-      alert('Please enter a valid email address');
+      alert('Please Enter a Valid Email Address');
     }
   }
 }

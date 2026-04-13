@@ -18,35 +18,35 @@
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
         <a
-          (click)="scrollToSection('home')"
+          routerLink="/"
           class="nav-link link-underline"
-          [class.nav-active]="activeSection() === 'home'"
+          [class.nav-active]="getActiveLink() === 'home'"
         >
           {{ i18n.t('nav.home') }}
         </a>
         <a
-          (click)="scrollToSection('about')"
+          routerLink="/about"
           class="nav-link link-underline"
-          [class.nav-active]="activeSection() === 'about'"
+          [class.nav-active]="getActiveLink() === 'about'"
         >
           {{ i18n.t('nav.about') }}
         </a>
         <a
-          (click)="scrollToSection('products')"
+          routerLink="/products"
           class="nav-link link-underline"
-          [class.nav-active]="activeSection() === 'products'"
+          [class.nav-active]="getActiveLink() === 'products'"
         >
           {{ i18n.t('nav.products') }}
         </a>
         <a
-          (click)="scrollToSection('contact')"
+          routerLink="/contact"
           class="nav-link link-underline"
-          [class.nav-active]="activeSection() === 'contact'"
+          [class.nav-active]="getActiveLink() === 'contact'"
         >
           {{ i18n.t('nav.contact') }}
         </a>
         <a
-          (click)="scrollToSection('joinus')"
+          routerLink="/"
           class="nav-cta btn-ripple"
         >
           {{ i18n.t('cta.joinUs') }}
@@ -139,39 +139,44 @@
     >
       <nav class="mobile-nav-list">
         <a
-          (click)="scrollToSection('home'); mobileMenuOpen.set(false)"
+          routerLink="/"
+          (click)="mobileMenuOpen.set(false)"
           class="mobile-nav-link"
-          [class.nav-active]="activeSection() === 'home'"
-          [class.font-semibold]="activeSection() === 'home'"
+          [class.nav-active]="getActiveLink() === 'home'"
+          [class.font-semibold]="getActiveLink() === 'home'"
         >
           {{ i18n.t('nav.home') }}
         </a>
         <a
-          (click)="scrollToSection('about'); mobileMenuOpen.set(false)"
+          routerLink="/about"
+          (click)="mobileMenuOpen.set(false)"
           class="mobile-nav-link"
-          [class.nav-active]="activeSection() === 'about'"
-          [class.font-semibold]="activeSection() === 'about'"
+          [class.nav-active]="getActiveLink() === 'about'"
+          [class.font-semibold]="getActiveLink() === 'about'"
         >
           {{ i18n.t('nav.about') }}
         </a>
         <a
-          (click)="scrollToSection('products'); mobileMenuOpen.set(false)"
+          routerLink="/products"
+          (click)="mobileMenuOpen.set(false)"
           class="mobile-nav-link"
-          [class.nav-active]="activeSection() === 'products'"
-          [class.font-semibold]="activeSection() === 'products'"
+          [class.nav-active]="getActiveLink() === 'products'"
+          [class.font-semibold]="getActiveLink() === 'products'"
         >
           {{ i18n.t('nav.products') }}
         </a>
         <a
-          (click)="scrollToSection('contact'); mobileMenuOpen.set(false)"
+          routerLink="/contact"
+          (click)="mobileMenuOpen.set(false)"
           class="mobile-nav-link"
-          [class.nav-active]="activeSection() === 'contact'"
-          [class.font-semibold]="activeSection() === 'contact'"
+          [class.nav-active]="getActiveLink() === 'contact'"
+          [class.font-semibold]="getActiveLink() === 'contact'"
         >
           {{ i18n.t('nav.contact') }}
         </a>
         <a
-          (click)="scrollToSection('joinus'); mobileMenuOpen.set(false)"
+          routerLink="/"
+          (click)="mobileMenuOpen.set(false)"
           class="mobile-nav-cta btn-ripple"
         >
           {{ i18n.t('cta.joinUs') }}

@@ -119,7 +119,7 @@ export const TRANSLATIONS: TranslationMap = {
     'footer.terms': 'Terms of Services',
     'footer.privacy': 'Privacy policy',
     'footer.commitment': 'Committed to build a shared success whereas we uplift underserved segments of society.',
-    'footer.copyright': '© 2024 kuza Capital Finance',
+    'footer.copyright': '© 2026 kuza Capital Finance',
 
     // Expert Detail Page
     'expert.backHome': 'Back to Home',
@@ -175,6 +175,10 @@ export const TRANSLATIONS: TranslationMap = {
     'comment.comment': 'Comment',
     'comment.commentPlaceholder': 'Enter your Comment',
     'comment.post': 'Post Comment',
+    'comment.sending': 'Sending...',
+    'comment.success': 'Your message has been sent successfully! We will get back to you soon.',
+    'comment.error': 'Failed to send message. Please try again or email us directly at architectwills@gmail.com',
+    'comment.fillAll': 'Please fill in all fields before submitting.',
   },
 
   sw: {
@@ -344,5 +348,9 @@ export const TRANSLATIONS: TranslationMap = {
     'comment.comment': 'Maoni',
     'comment.commentPlaceholder': 'Ingiza maoni yako',
     'comment.post': 'Chapisha Maoni',
+    'comment.sending': 'Inatuma...',
+    'comment.success': 'Ujumbe wako umetumwa kwa mafanikio! Tutawasiliana nawe hivi karibuni.',
+    'comment.error': 'Imeshindwa kutuma ujumbe. Tafadhali jaribu tena au tutumie barua pepe moja kwa moja architectwills@gmail.com',
+    'comment.fillAll': 'Tafadhali jaza sehemu zote kabla ya kutuma.',
   },
 };

@@ -1,0 +1,71 @@
+<section class="contact-section">
+  <div class="contact-bg-dots"></div>
+  <div appScrollReveal="fade-up" class="contact-container">
+    <div class="contact-header">
+      <span class="contact-badge section-badge">{{ i18n.t('nav.contact') }}</span>
+      <h2 class="contact-heading">{{ i18n.t('comment.heading') }}</h2>
+    </div>
+    <form class="contact-form gradient-border" (ngSubmit)="submitContact()">
+      <!-- Name -->
+      <div>
+        <label for="contact-name" class="contact-label">{{ i18n.t('comment.name') }}</label>
+        <input
+          id="contact-name"
+          type="text"
+          [(ngModel)]="contactName"
+          name="name"
+          [placeholder]="i18n.t('comment.namePlaceholder')"
+          class="contact-input"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="contact-email" class="contact-label">{{ i18n.t('comment.email') }}</label>
+        <input
+          id="contact-email"
+          type="email"
+          [(ngModel)]="contactEmail"
+          name="email"
+          [placeholder]="i18n.t('comment.emailPlaceholder')"
+          class="contact-input"
+          required
+        />
+      </div>
+
+      <!-- Comment -->
+      <div>
+        <label for="contact-comment" class="contact-label">{{ i18n.t('comment.comment') }}</label>
+        <textarea
+          id="contact-comment"
+          rows="6"
+          [(ngModel)]="contactComment"
+          name="comment"
+          [placeholder]="i18n.t('comment.commentPlaceholder')"
+          class="contact-textarea"
+          required
+        ></textarea>
+      </div>
+
+      <!-- Status Messages -->
+      <div *ngIf="submitStatus === 'success'" class="contact-status contact-status-success">
+        ✅ {{ i18n.t('comment.success') }}
+      </div>
+      <div *ngIf="submitStatus === 'error'" class="contact-status contact-status-error">
+        ❌ {{ i18n.t('comment.error') }}
+      </div>
+
+      <!-- Submit Button -->
+      <div class="contact-submit-wrapper">
+        <button
+          type="submit"
+          class="contact-submit-btn btn-magnetic btn-shine"
+          [disabled]="isSubmitting"
+        >
+          {{ isSubmitting ? i18n.t('comment.sending') : i18n.t('comment.post') }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
