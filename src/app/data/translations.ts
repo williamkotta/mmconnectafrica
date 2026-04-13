@@ -292,7 +292,7 @@ export const TRANSLATIONS: TranslationMap = {
     'footer.terms': 'Masharti ya Huduma',
     'footer.privacy': 'Sera ya Faragha',
     'footer.commitment': 'Tumejitolea kujenga mafanikio ya pamoja huku tukiinua sehemu za jamii zisizopata huduma za kutosha.',
-    'footer.copyright': '© 2024 kuza Capital Finance',
+    'footer.copyright': '© 2026 kuza Capital Finance',
 
     // Expert Detail Page
     'expert.backHome': 'Rudi Nyumbani',
