@@ -28,7 +28,7 @@ const PAGE_PREVIEWS: Record<string, PagePreview> = {
     description: 'From Kuza Sokoni to Kuza Pay, our product range is designed to empower Tanzanian market vendors with financial and non-financial services through digital tools and tailored solutions.',
     highlights: [
       'Kuza Sokoni — Digital marketplace for market vendors',
-      'Kuza Maisha — Lifestyle and financial wellness platform',
+      'Kuza Academy — Lifestyle and financial wellness platform',
       'Kuza Pay — Seamless digital payment solutions',
       'Kuza Biashara — Business growth and management tools',
     ],
