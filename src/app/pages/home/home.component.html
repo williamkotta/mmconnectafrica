@@ -3,7 +3,7 @@
   <div id="home">
     <app-hero></app-hero>
   </div>
-  
+
   <!-- Mission & Vision / About Section -->
   <div id="about">
     <app-mission-vision></app-mission-vision>
@@ -14,13 +14,13 @@
     <app-products></app-products>
   </div>
 
-  <!-- Focus Areas Section -->
-  <app-focus-areas></app-focus-areas>
-
   <!-- Team / CTA Section -->
   <div>
     <app-cta-section></app-cta-section>
   </div>
+
+  <!-- Focus Areas Section -->
+  <app-focus-areas></app-focus-areas>
 
   <!-- Comment / Contact Section -->
   <section id="contact" class="contact-section">
@@ -30,6 +30,7 @@
         <span class="contact-badge section-badge">{{ i18n.t('nav.contact') }}</span>
         <h2 class="contact-heading">{{ i18n.t('comment.heading') }}</h2>
       </div>
+
       <form class="contact-form gradient-border" (ngSubmit)="submitContact()">
         <!-- Name -->
         <div>

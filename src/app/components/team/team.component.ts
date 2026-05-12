@@ -29,40 +29,5 @@ export class TeamComponent {
       initials: 'MM',
       color: 'primary',
     },
-    {
-      id: 2,
-      name: 'Thuweini Makamba',
-      role: 'City Founder',
-      initials: 'TM',
-      color: 'primary',
-    },
-    {
-      id: 3,
-      name: 'Elvis Mushi',
-      role: 'Chief Technology Officer',
-      initials: 'EM',
-      color: 'primary',
-    },
-    {
-      id: 4,
-      name: 'Sameera Hussein',
-      role: 'Business Manager',
-      initials: 'SH',
-      color: 'primary',
-    },
-    {
-      id: 5,
-      name: 'George Magara',
-      role: 'Operations Lead',
-      initials: 'GM',
-      color: 'primary',
-    },
-    {
-      id: 6,
-      name: 'Elhaina Singo',
-      role: 'Head of Finance',
-      initials: 'ES',
-      color: 'primary',
-    },
   ];
 }

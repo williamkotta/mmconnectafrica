@@ -36,6 +36,11 @@
   @apply h-12 w-auto;
 }
 
+/* Ensure logo remains visible on dark backgrounds */
+:host-context(.dark) .footer-logo {
+  filter: invert(1) hue-rotate(180deg) brightness(1.1);
+}
+
 .footer-address {
   @apply text-white/60 text-sm mb-5 leading-relaxed font-body;
 }

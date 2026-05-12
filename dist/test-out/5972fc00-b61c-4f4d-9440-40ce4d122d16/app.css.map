@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/app.css"],
+  "sourcesContent": ["/* App component styles */\n\n.app-wrapper {\n  @apply min-h-screen flex flex-col bg-white dark:bg-secondary-900 transition-colors duration-300;\n}\n\n.app-main {\n  @apply flex-grow;\n}\n"],
+  "mappings": ";AAGE,CAAA;AAAA,WAAA;AAAA,cAAA;AAAA,kBAAA;AAAA,mBAAA;AAAA,oBAAA,IAAA,IAAA,IAAA,IAAA,EAAA,IAAA,eAAA,EAAA;AAAA;IAAA,KAAA;IAAA,gBAAA;IAAA,YAAA;IAAA,qBAAA;IAAA,IAAA;IAAA;AAAA,8BAAA,aAAA,GAAA,EAAA,CAAA,EAAA,GAAA,EAAA;AAAA,uBAAA;AAA+F;AAA/F,CAAA,WAAA,IAAA,CAAA,KAAA;AAAA,mBAAA;AAAA,oBAAA,IAAA,GAAA,GAAA,GAAA,EAAA,IAAA,eAAA,EAAA;AAA+F;AAI/F,CAAA;AAAA,aAAA;AAAgB;",
+  "names": []
+}

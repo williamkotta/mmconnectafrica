@@ -51,11 +51,11 @@
 }
 
 .product-image-wrapper {
-  @apply relative h-40 bg-gradient-to-br from-primary-700 to-primary-900 rounded-xl mb-6 overflow-hidden flex items-center justify-center p-4 shadow-lg;
+  @apply relative h-24 bg-gradient-to-br from-primary-700 to-primary-900 rounded-xl mb-6 overflow-hidden flex items-center justify-center p-2 shadow-lg;
 }
 
 .product-image {
-  @apply h-28 w-auto object-contain transition-transform duration-700;
+  @apply h-12 w-auto object-contain transition-transform duration-700;
 }
 
 .product-card:hover .product-image {
@@ -84,4 +84,25 @@
 
 .product-link {
   @apply inline-block bg-gradient-to-r from-primary-600 to-primary-800 hover:from-primary-700 hover:to-primary-900 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 text-sm shadow-md cursor-pointer;
+}
+
+.product-link-external {
+  @apply inline-block bg-gradient-to-r from-secondary-600 to-secondary-700 hover:from-secondary-700 hover:to-secondary-800 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 text-sm shadow-md cursor-pointer ml-2;
+}
+
+/* Product-specific image sizing */
+.product-card-mmcarbon .product-image {
+  @apply h-24 w-auto;
+}
+
+.product-card-mmcarbon .product-image-wrapper {
+  @apply h-48;
+}
+
+.product-card-kuza-capital .product-image {
+  @apply h-8 w-auto;
+}
+
+.product-card-kuza-capital .product-image-wrapper {
+  @apply h-16;
 }

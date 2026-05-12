@@ -30,6 +30,12 @@
   @apply h-9 lg:h-10 w-auto;
 }
 
+/* Ensure logo remains visible on dark background */
+:host-context(.dark) .header-logo-img {
+  /* invert + hue-rotate tends to work for many light logos */
+  filter: invert(1) hue-rotate(180deg) brightness(1.1);
+}
+
 /* Desktop Navigation */
 .desktop-nav {
   @apply hidden lg:flex items-center gap-1;

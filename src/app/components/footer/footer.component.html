@@ -10,7 +10,7 @@
       <div class="footer-brand">
         <!-- KUZA Logo -->
         <div class="footer-logo-wrapper">
-          <img src="assets/kuzalogo2.png" alt="KUZA Logo" class="footer-logo" />
+          <img src="assets/LOGO.png" alt="KUZA Logo" class="footer-logo" />
         </div>
         <p class="footer-address">
           9th Floor OEFI House Mizacheni along Bagamoyo Road, Dar es Salaam, Tanzania
@@ -41,11 +41,11 @@
       <div>
         <h4 class="footer-col-title">{{ i18n.t('footer.products') }}</h4>
         <ul class="footer-col-list">
-          <li><a href="#" class="footer-col-link">Kuza Sokoni</a></li>
-          <li><a href="#" class="footer-col-link">Kuza Academy</a></li>
-          <li><a href="#" class="footer-col-link">Kuza Pay</a></li>
-          <li><a href="#" class="footer-col-link">Kuza Biashara</a></li>
-          <li><a href="#" class="footer-col-link">Kuza Kilimo</a></li>
+          <li *ngFor="let product of products">
+            <a [routerLink]="['/product', product.id]" class="footer-col-link">
+              {{ i18n.t(product.nameKey) }}
+            </a>
+          </li>
         </ul>
       </div>
 
