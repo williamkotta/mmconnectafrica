@@ -6,26 +6,24 @@
     <!-- Section Header -->
     <div appScrollReveal="fade-up" class="team-header">
       <span class="section-badge team-badge">{{ i18n.t('nav.team') }}</span>
-      <h2 class="team-heading">
-        {{ i18n.t('team.heading') }}
-      </h2>
+      <h2 class="team-heading">{{ i18n.t('team.heading') }}</h2>
     </div>
 
-    <!-- Team Grid -->
-    <div class="team-grid">
-      <div *ngFor="let member of teamMembers; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 100" class="team-member group">
-        <!-- Avatar with morph blob -->
-        <div class="member-avatar-wrapper">
-          <div class="member-avatar morph-blob">
-            <span class="member-initials">{{ member.initials }}</span>
-          </div>
-          <!-- Decorative ring on hover -->
-          <div class="member-ring animate-spin-slow"></div>
+    <div *ngIf="teamMembers.length" class="team-grid">
+      <div *ngFor="let member of teamMembers; let i = index" appScrollReveal="fade-up" [revealDelay]="i * 80" class="team-card">
+        <div class="team-card-portrait">
+          <img [src]="member.image" [alt]="member.name" class="team-card-photo" />
+          <span class="team-card-status"></span>
         </div>
-        <!-- Content -->
-        <div class="member-info">
-          <h3 class="member-name">{{ member.name }}</h3>
-          <p class="member-role">{{ member.role }}</p>
+        <div class="team-card-body">
+          <h3 class="team-card-name">{{ member.name }}</h3>
+          <p class="team-card-role">{{ member.title }}</p>
+          <a href="/expert/{{ member.id }}" class="team-card-link">
+            {{ i18n.t('team.viewMore') }}
+            <svg class="team-card-link-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

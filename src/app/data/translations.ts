@@ -39,6 +39,14 @@ export const TRANSLATIONS: TranslationMap = {
     'vision.text':
       'To become a leading technology group in Africa, enabling people and businesses to thrive through innovation and accessibility.',
 
+    // Founder Message (Mission / Vision)
+    'mv.founder.heading': 'Message from Our Founder',
+    'mv.founder.leadLine1': 'To everyone reading this — welcome. Thank you.',
+    'mv.founder.leadLine2': 'Not just to joining the company. But to joining the mission.',
+    'mv.founder.signature': '— Mwamvita Makamba, Founder',
+    'mv.founder.body':
+      'Dear Friends and Partners,\n\nI am Mwamvita Makamba, Founder and CEO of MMConnect Africa. For the past 15 years, I have been deeply immersed in the African technology and financial services landscape, witnessing firsthand the transformative power of innovation when it reaches the people who need it most.\n\nAt MMConnect Africa, we are not just building products—we are building bridges. Bridges between underserved communities and the opportunities they deserve. Bridges between traditional ways of doing business and the digital future. Bridges between potential and prosperity.\n\nOur journey began with a simple belief: that every African deserves access to the tools and services that can change their life. From market vendors in Dar es Salaam to farmers in rural Tanzania, from boda boda riders navigating city streets to small business owners dreaming big—we see their potential, and we build to unlock it.\n\nToday, our ecosystem spans finance, lifestyle, energy, and sustainability. Through Kuza Capital, we provide inclusive finance that reaches the unbanked. Through Tiketika, we connect people to experiences and opportunities. Through Jibusti, we ensure no one is left in the dark. Through MMCarbon, we build a sustainable future for generations to come.\n\nBut our work is far from done. Africa is a continent of incredible potential, and we are committed to being part of the solution. We invite you to join us on this journey—to build, to innovate, and to create shared prosperity.\n\nTogether, we can connect Africa to its brightest future.\n\nWarm regards,\n\nMwamvita Makamba\nFounder & CEO, MMConnect Africa',
+
     // Products Section
     'products.heading': 'Discover Our Versatile Product',
     'products.headingLine2': 'Range',
@@ -214,6 +222,11 @@ export const TRANSLATIONS: TranslationMap = {
 
     // Team
     'team.heading': 'Meet the Minds Powering Our Vision',
+    'team.description': 'We are committed to build a shared success whereas we uplift underserved segments of society. We\'re ensuring a model of growth that\'s sustainable, impactful, and rewarding for all stakeholders in the ecosystem.',
+    'team.viewMore': 'View More',
+    'team.showLess': 'Show Less',
+    'team.connect': 'Connect',
+    'team.backHome': 'Back Home',
 
     // Comment form (home page)
     'comment.heading': 'Leave a Comment',
@@ -248,7 +261,7 @@ export const TRANSLATIONS: TranslationMap = {
     'hero.news2': 'Ushirikiano mpya na SME za ndani kwa ushirikishwaji wa kidijitali',
     'hero.news3': 'Kuza inazindua programu ya kuwawezesha vijana Afrika Mashariki',
     'hero.news4': 'Jiunge na webina yetu kuhusu mikakati ya biashara jumuishi',
-    'hero.heading': 'Endelea Kukua',
+    'hero.heading': 'Tunajenga Kile Afrika Inachohitaji Ifuatayo',
     'hero.description':
       'MMConnect Africa ni kundi la teknolojia linalounda majukwaa na miundombinu inayowezesha maisha ya kila siku — kuanzia fedha hadi nishati, usafiri hadi uendelevu.',
     'hero.cta': 'Jiunge Nasi',
@@ -308,8 +321,13 @@ export const TRANSLATIONS: TranslationMap = {
     'focus.pyramidDesc':
       'Chini ya Piramidi, tunabadilisha uwezo kuwa ustawi wa pamoja kwa kuwawezesha jamii zisizopata huduma za kutosha. Kupitia upatikanaji wa rasilimali, mafunzo, na fursa, tunafungua ukuaji wa kiuchumi kutoka chini. Pamoja, tunajenga njia za ujumuishaji wa kifedha, tukikuza mustakabali ambapo kila mtu anaweza kustawi.',
 
-    // CTA Section
-    'cta.expertsHeading': 'Kutana na Akili Zinazoendesha Maono Yetu',
+    // Founder Message (Mission / Vision)
+    'mv.founder.heading': 'Ujumbe kutoka kwa Mwanzilishi Wetu',
+    'mv.founder.leadLine1': 'Kwa kila mtu anayesoma hapa — karibu. Asante.',
+    'mv.founder.leadLine2': 'Si tu kwa kujiunga na kampuni. Bali kwa kujiunga na dhamira.',
+    'mv.founder.signature': '— Mwamvita Makamba, Mwanzilishi',
+    'mv.founder.body':
+      'MMConnect Africa ipo kwa sababu tulikataa kusubiri. Tulitazama bara la watu bilioni 1.4 — walio vijana zaidi na wanaokua kwa kasi duniani — kisha tukagundua kilichokuwa kinakosekana. Sio hamu. Afrika haijawahi kukosa hamu. Kilichokosekana ni mifumo, majukwaa, na miundombinu inayogeuza hamu kuwa maendeleo. \n\nNdiyo maana tuliamua kuijenga. \n\nTunaijenga taasisi inayotumikia Afrika kwa njia ambazo zimeshachukua muda mrefu kuanza — huduma za fedha zinazopatikana kwa muuzaji wa sokoni aliyewahi kukosa mkopo, umeme wa uhakika kwa mjasiriamali anayeupoteza muda kila siku kwa kukatika kwa umeme, huduma za kidijitali zilizo rahisi kwa msafiri anayestahili zaidi ya mifumo iliyovunjika, na suluhisho endelevu kwa bara linalopaswa kukua bila kurudia makosa ya dunia. \n\nKazi hii ni kubwa kuliko mtu yeyote kati yetu. Ni kubwa kuliko majina ya vyeo, kuliko idara, kuliko malengo ya kila robo. Tunajenga miundombinu kwa kizazi. Tunaunda njia ambazo hazikuwepo kabla hatujazichora. \n\nNa haya ndiyo ninayohitaji kuelewa: ikiwa hatutafanya haya, hakuna atakayefanya. Sio kwa sababu wengine hawajali. Ni kwa sababu mchanganyiko huu wa watu, katika wakati huu maalum, ukiwa na moto huu — hicho ndicho sisi. Sisi ndio tulikuwa tunasubiriwa. \n\nKila jukumu katika taasisi hii ni muhimu. Mhandisi anaandika msimbo usiku wa manane. Wakala wa masokoni anaongoza muuzaji kujiunga. Timu ya fedha inahakikisha kila shilingi inahesabiwa. Kiongozi wa uendeshaji anaitatua changamoto kabla hayajageuka mgogoro. Ninyi nyote mnaijenga kitu kitakachodumu hata baada yetu. \n\nHii sio kazi tu. Hii ni fursa yako kuacha urithi — Afrika na duniani. Suluhisho tunazojenga leo lita hudumia mamilioni kesho. Mifumo tunayoianzisha itakuwa mgongo wa jinsi watu wanavyoweza kupata fedha, nishati, usafiri, na fursa kote kwenye bara hili. \n\nKwa hiyo, songa kwa kasi. Chukua uwajibikaji. Jitegemee na kila mmoja wenu. Endelea kuwa bila kulegea kwenye utekelezaji na kuwa wenye ukarimu katika ushirikiano. Jenga kwa fahari, kwa sababu kile mnachojenga kina maana.',
     'cta.viewMore': 'Tazama Zaidi',
     'cta.bodyText':
       'Tumejitolea kujenga mafanikio ya pamoja huku tukiinua sehemu za jamii zisizopata huduma za kutosha. Tunahakikisha mfano wa ukuaji endelevu, wenye athari, na wenye malipo kwa wadau wote katika mfumo.',
@@ -317,6 +335,8 @@ export const TRANSLATIONS: TranslationMap = {
     'cta.joinUsSub': 'Tunaendeshwa na Dhamira, Tumeungana katika Maendeleo!',
     'cta.emailPlaceholder': 'Ingiza barua pepe yako',
     'cta.createAccount': 'Fungua akaunti',
+    'cta.alertWelcome': 'Karibu! Angalia {email} kwa taarifa zaidi.',
+    'cta.alertInvalidEmail': 'Tafadhali ingiza barua pepe halali.',
 
     // Reviews
     'reviews.heading': 'Maoni',
@@ -351,6 +371,11 @@ export const TRANSLATIONS: TranslationMap = {
 
     // Team
     'team.heading': 'Kutana na Akili Zinazoendesha Maono Yetu',
+    'team.description': 'Timu yetu inajenga mustakabali wa Afrika kupitia teknolojia ya ujumuishaji na suluhisho zinazorahisisha maisha ya kila siku.',
+    'team.viewMore': 'Tazama Zaidi',
+    'team.showLess': 'Onyesha Kidogo',
+    'team.connect': 'Ungana',
+    'team.backHome': 'Rudi Nyumbani',
 
     // Comment form (home page)
     'comment.heading': 'Acha Maoni',

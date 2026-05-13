@@ -92,11 +92,11 @@
 
 /* Product-specific image sizing */
 .product-card-mmcarbon .product-image {
-  @apply h-24 w-auto;
+  @apply h-12 w-auto;
 }
 
 .product-card-mmcarbon .product-image-wrapper {
-  @apply h-48;
+  @apply h-24;
 }
 
 .product-card-kuza-capital .product-image {

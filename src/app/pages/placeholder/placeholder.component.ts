@@ -13,46 +13,50 @@ interface PagePreview {
 const PAGE_PREVIEWS: Record<string, PagePreview> = {
   'About Us': {
     image: 'assets/6.png',
-    subtitle: 'Empowering Communities Across East Africa',
-    description: 'Kuza is dedicated to building inclusive business models that empower underserved communities. Our mission is to illuminate the essence of inclusivity and potentiality to ensure no ambition remains unsupported.',
+    subtitle: 'Kuendelea Kuwawezesha Watu Katika Afrika Mashariki',
+    description:
+      'Kuza imejikita katika kujenga mifano jumuishi ya biashara inayowawezesha jamii ambazo hazijapata fursa. Dhamira yetu ni kuangaza kiini cha ujumuishaji na uwezo ili kuhakikisha hakuna hamu itakayobaki bila msaada.',
     highlights: [
-      'Founded with a vision for inclusive growth and shared prosperity',
-      'Operating across multiple regions in East Africa',
-      'Partnered with international development organizations',
-      'Empowering youth, emerging businesses, and underserved communities',
+      'Iliundwa kwa maono ya ukuaji jumuishi na ustawi wa pamoja',
+      'Inafanya kazi katika maeneo mbalimbali ya Afrika Mashariki',
+      'Kushirikiana na mashirika ya kimataifa ya maendeleo',
+      'Kuwawezesha vijana, biashara zinazoibuka, na jamii zisizopata huduma kwa wingi',
     ],
   },
   'Our Products': {
     image: 'assets/13.png',
-    subtitle: 'Digital Solutions for Every Need',
-    description: 'From Kuza Sokoni to Kuza Pay, our product range is designed to empower Tanzanian market vendors with financial and non-financial services through digital tools and tailored solutions.',
+    subtitle: 'Suluhisho za Kidijitali Kwa Kila Hitaji',
+    description:
+      'Kuanzia Kuza Sokoni hadi Kuza Pay, bidhaa zetu zimeundwa kuwawezesha wachuuzi wa masoko wa Tanzania kwa huduma za kifedha na zisizo za kifedha kupitia zana za kidijitali na suluhisho maalum.',
     highlights: [
-      'Kuza Sokoni — Digital marketplace for market vendors',
-      'Kuza Academy — Lifestyle and financial wellness platform',
-      'Kuza Pay — Seamless digital payment solutions',
-      'Kuza Biashara — Business growth and management tools',
+      'Kuza Sokoni — Soko la kidijitali kwa wachuuzi wa masoko',
+      'Kuza Academy — Jukwaa la ustawi wa maisha na kifedha',
+      'Kuza Pay — Suluhisho la malipo ya kidijitali lililo rahisi',
+      'Kuza Biashara — Zana za kukuza na kusimamia biashara',
     ],
   },
   'Our Team': {
     image: 'assets/6.png',
-    subtitle: 'Meet the Minds Powering Our Vision',
-    description: 'Our team brings together experts in social enterprise, urban development, technology, and business strategy to drive inclusive growth across East Africa.',
+    subtitle: 'Kukutana na Akili Zinazoipa Dira Yetu Nguvu',
+    description:
+      'Timu yetu inaleta pamoja wataalamu wa biashara za kijamii, maendeleo ya miji, teknolojia, na mkakati wa biashara ili kuendesha ukuaji jumuishi kote Afrika Mashariki.',
     highlights: [
-      'Experienced leadership in social enterprise and community development',
-      'Technology experts driving digital transformation',
-      'Strategic business minds expanding our impact',
-      'United by a shared commitment to inclusive growth',
+      'Uongozi wenye uzoefu katika biashara za kijamii na maendeleo ya jamii',
+      'Wataalamu wa teknolojia wanaoendesha mabadiliko ya kidijitali',
+      'Akili za kimkakati za biashara zinazopanua athari zetu',
+      'Kuunganishwa na dhamira ya pamoja ya ukuaji jumuishi',
     ],
   },
   'Contact Us': {
     image: 'assets/6.png',
-    subtitle: 'We\'d Love to Hear From You',
-    description: 'Whether you\'re looking to partner with us, join our programs, or learn more about our products, our team is here to help you take the next step.',
+    subtitle: 'Tunapenda Kusikia Kutoka Kwako',
+    description:
+      'Iwe unatafuta kushirikiana nasi, kujiunga na programu zetu, au kujifunza zaidi kuhusu bidhaa zetu, timu yetu iko hapa kukusaidia hatua inayofuata.',
     highlights: [
-      'Reach out for partnership and collaboration opportunities',
-      'Inquire about our products and services',
-      'Join our community empowerment programs',
-      'Get support for existing services',
+      'Wasiliana nasi kwa fursa za ushirikiano na ubia',
+      'Uliza kuhusu bidhaa na huduma zetu',
+      'Jiunge na programu zetu za kuwawezesha jamii',
+      'Pata msaada wa huduma zilizopo',
     ],
   },
 };
@@ -66,15 +70,16 @@ const PAGE_PREVIEWS: Record<string, PagePreview> = {
 })
 export class PlaceholderComponent implements OnInit {
   readonly i18n = inject(TranslationService);
-  title = 'Coming Soon';
+  title = 'Kuja Hivi Karibuni';
   showPreview = signal(false);
   preview: PagePreview | null = null;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.route.data.subscribe(data => {
-      this.title = data['title'] || 'Coming Soon';
+    this.route.data.subscribe((data) => {
+      const routeTitle = data['title'] as string | undefined;
+      this.title = routeTitle || 'Kuja Hivi Karibuni';
       this.preview = PAGE_PREVIEWS[this.title] || null;
     });
   }

@@ -18,10 +18,10 @@ export class CtaSectionComponent {
   handleSignup() {
     const emailValue = this.email();
     if (emailValue && emailValue.includes('@')) {
-      alert(`Welcome! Check ${emailValue} for more updates.`);
+      alert(this.i18n.t('cta.alertWelcome').replace('{email}', emailValue));
       this.email.set('');
     } else {
-      alert('Please Enter a Valid Email Address');
+      alert(this.i18n.t('cta.alertInvalidEmail'));
     }
   }
 }

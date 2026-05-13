@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { MissionVisionComponent } from '../../components/mission-vision/mission-vision.component';
 import { ProductsComponent } from '../../components/products/products.component';
+import { TeamComponent } from '../../components/team/team.component';
 import { FocusAreasComponent } from '../../components/focus-areas';
 import { CtaSectionComponent } from '../../components/cta-section/cta-section.component';
 import { TranslationService } from '../../services/translation.service';
@@ -18,6 +19,7 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
     HeroComponent,
     MissionVisionComponent,
     ProductsComponent,
+    TeamComponent,
     FocusAreasComponent,
     CtaSectionComponent,
     ScrollRevealDirective,

@@ -26,22 +26,22 @@ export class ReviewsComponent {
     {
       id: 1,
       name: 'Mwamvua Khamis',
-      role: 'Market Vendor at Kisutu',
-      text: 'Huzusha sana lukuza biashara yangu. Mizigo wao umetokoeza kiasi miopo wao wiki moja, na hapa hapa ni waliweza kucheza wazazi, na kuweza kumwuliza mirubu ya mwenyembea kwa wakati sami aka saka juu za biashara nzuri',
+      role: 'Muuzaji wa Soko Kisutu',
+      text: 'Nimefurahishwa sana na Kuza kwa jinsi walivyoipa biashara yangu nguvu. Mizigo na bidhaa zangu zimepangwa na kuongezeka kwa kasi, na ndani ya wiki chache niliweza kuona mabadiliko kwenye mauzo. Pia niliweza kupata mafunzo na ushauri wa kuwasaidia wateja wangu, hivyo biashara ikasimama vizuri zaidi.',
       image: 'assets/experts/mwamvita.png',
     },
     {
       id: 2,
       name: 'Juma Kisauke',
-      role: 'Market Vendor at Kisutu',
-      text: 'Huduma ya Kuza Capital Finance ni bora sana! Timu yao ni rafiki na matuelewa wafanyabiashara yangu na bora ni milao som biashara yangu ili kuimba ni kusamehe wako Kisutu.',
+      role: 'Muuzaji wa Soko Kisutu',
+      text: 'Huduma ya Kuza Capital Finance imekuwa bora sana kwangu. Timu yao ni rafiki na inaelewa mahitaji ya wafanyabiashara. Walisaidia kupanga jinsi ya kupata fedha na kuzirudisha kwa urahisi, na hii imenisaidia kuendeleza shughuli zangu za Kisutu kwa ufanisi.',
       image: 'assets/experts/ThuweinMakamba.png',
     },
     {
       id: 3,
       name: 'Hilda Mwani',
-      role: 'Market Vendor at Kisutu',
-      text: 'Asante Kuza Capital Finance kwa huduma ni ya umari kabisa. Tumaini na umuri yenyu ya kupiga kelele kwa sheria ni umizi kabisa. Hilo linakamatia saba vipengele vya umri wa jamii',
+      role: 'Muuzaji wa Soko Kisutu',
+      text: 'Ninashukuru Kuza Capital Finance kwa huduma—ni ya kuaminika na inasaidia sana. Wamenipa mwongozo mzuri na ufahamu wa jinsi ya kutumia fedha kwa malengo ya biashara. Nimeona tija na mabadiliko chanya kwenye maisha yangu na biashara kwa ujumla.',
       image: 'assets/experts/sameera.png',
     },
   ];

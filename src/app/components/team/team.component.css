@@ -5,13 +5,13 @@
 }
 
 .team-section {
-  @apply relative py-20 lg:py-28 bg-gradient-to-b from-white to-secondary-50/30 overflow-hidden;
+  @apply relative py-20 lg:py-28 bg-slate-950 overflow-hidden;
 }
 
 .team-bg-dots {
-  @apply absolute inset-0 opacity-15 pointer-events-none;
-  background-image: radial-gradient(circle, #CBD5E1 1px, transparent 1px);
-  background-size: 20px 20px;
+  @apply absolute inset-0 opacity-10 pointer-events-none;
+  background-image: radial-gradient(circle, rgba(148,163,184,0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 .team-container {
@@ -23,61 +23,55 @@
 }
 
 .team-badge {
-  @apply mb-4 inline-flex;
+  @apply inline-flex px-4 py-2 rounded-full bg-sky-700/20 text-sky-200 text-xs font-semibold uppercase tracking-[0.32em] ring-1 ring-sky-500/40;
 }
 
 .team-heading {
-  @apply text-3xl lg:text-4xl font-extrabold text-secondary-900 font-display tracking-tight;
+  @apply mt-4 text-3xl md:text-4xl font-extrabold text-white tracking-tight;
 }
 
 .team-grid {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12;
+  @apply grid gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-12;
 }
 
-.team-member {
-  @apply flex flex-col items-center cursor-default;
+.team-card {
+  @apply flex flex-col items-center gap-5 text-center;
 }
 
-.member-avatar-wrapper {
-  @apply relative mb-5;
+.team-card-portrait {
+  @apply relative rounded-full border-4 border-sky-500 shadow-[0_25px_60px_rgba(14,165,233,0.18)] overflow-hidden;
+  width: 220px;
+  height: 220px;
 }
 
-.member-avatar {
-  @apply w-40 h-40 rounded-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center overflow-hidden transition-all duration-700;
+.team-card-photo {
+  @apply w-full h-full object-cover rounded-full;
 }
 
-.member-avatar:hover {
-  @apply shadow-2xl shadow-primary-200 scale-105;
+.team-card-status {
+  @apply absolute bottom-4 right-4 w-5 h-5 rounded-full bg-emerald-400 ring-2 ring-slate-950;
 }
 
-.member-initials {
-  @apply text-4xl font-extrabold text-white font-display transition-transform duration-500;
+.team-card-body {
+  @apply flex flex-col items-center gap-3;
 }
 
-.team-member:hover .member-initials {
-  @apply scale-110;
+.team-card-name {
+  @apply text-xl font-semibold text-white;
 }
 
-.member-ring {
-  @apply absolute -inset-2 rounded-full border-2 border-dashed border-primary-200 opacity-0 transition-all duration-500;
+.team-card-role {
+  @apply text-sm font-semibold text-sky-300;
 }
 
-.team-member:hover .member-ring {
-  @apply opacity-100;
+.team-card-link {
+  @apply inline-flex items-center gap-2 text-sm font-semibold text-slate-200 hover:text-white transition;
 }
 
-.member-info {
-  @apply text-center;
+.team-card-link-icon {
+  @apply w-4 h-4;
 }
 
-.member-name {
-  @apply text-lg font-bold text-primary-800 font-display transition-colors duration-300;
-}
-
-.team-member:hover .member-name {
-  @apply text-primary-600;
-}
-
-.member-role {
-  @apply text-primary-500 text-sm font-medium font-body;
+.team-summary {
+  @apply sr-only;
 }
