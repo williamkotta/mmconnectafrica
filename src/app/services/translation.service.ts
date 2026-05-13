@@ -19,7 +19,7 @@ export class TranslationService {
     { code: 'sw', label: 'Swahili', flag: '🇹🇿', nativeName: 'Kiswahili' },
   ];
 
-  currentLanguage = signal<Language>('en');
+  currentLanguage = signal<Language>('sw');
 
   currentLanguageOption = computed(() =>
     this.languages.find((l) => l.code === this.currentLanguage())!

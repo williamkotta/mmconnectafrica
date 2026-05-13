@@ -162,8 +162,8 @@ export const TRANSLATIONS: TranslationMap = {
     'footer.terms': 'Terms of Services',
     'footer.privacy': 'Privacy policy',
     'footer.commitment':
-      'Committed to build a shared success whereas we uplift underserved segments of society.',
-    'footer.copyright': '© 2026 kuza Capital Finance',
+      'Tumejitolea kujenga mafanikio ya pamoja huku tukiinua sehemu za jamii zisizopata huduma za kutosha.',
+    'footer.copyright': '© 2026 MMCONNECTAFRICA',
 
     // Expert Detail Page
     'expert.backHome': 'Back to Home',
