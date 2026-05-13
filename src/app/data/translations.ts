@@ -162,7 +162,7 @@ export const TRANSLATIONS: TranslationMap = {
     'footer.terms': 'Terms of Services',
     'footer.privacy': 'Privacy policy',
     'footer.commitment':
-      'Tumejitolea kujenga mafanikio ya pamoja huku tukiinua sehemu za jamii zisizopata huduma za kutosha.',
+      'We have committed ourselves to building shared success while uplifting the underserved sections of the community.',
     'footer.copyright': '© 2026 MMCONNECTAFRICA',
 
     // Expert Detail Page
@@ -347,7 +347,7 @@ export const TRANSLATIONS: TranslationMap = {
     'footer.privacy': 'Sera ya Faragha',
     'footer.commitment':
       'Tumejitolea kujenga mafanikio ya pamoja huku tukiinua sehemu za jamii zisizopata huduma za kutosha.',
-    'footer.copyright': '© 2026 MMCONNECTAFRICA',
+    'footer.copyright': '© 2026 mmconnectafrica',
 
     // Team
     'team.heading': 'Kutana na Akili Zinazoendesha Maono Yetu',
