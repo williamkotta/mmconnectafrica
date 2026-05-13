@@ -70,5 +70,5 @@
 
 .gradient-border {
   @apply border-l-2 border-b-2;
-  border-image: linear-gradient(135deg, #3B82F6, #8B5CF6) 1;
+  border-image: linear-gradient(135deg, #F55B2E, #FFC6A8) 1;
 }
